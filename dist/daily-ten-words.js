@@ -33,8 +33,8 @@
     const heroText=done>=5?'本周已积累 50 个词汇、20 个固定搭配、10 个语法语境点和 5 次篇章训练。':'每天固定完成：10 个词汇、4 个固定搭配、2 个语法语境点、1 段完整篇章和 4 题闭卷验证。';
     if(hero&&hero.textContent!==heroText)hero.textContent=heroText;
     document.querySelectorAll('.course-day small').forEach(x=>{if(/6词/.test(x.textContent))x.textContent='10词 · 4搭配 · 1篇';});
-    const chips=document.querySelectorAll('.progress-chip');
-    if(chips[0]&&/词汇/.test(chips[0].textContent))chips[0].textContent=(done*10)+' / 50 词汇';
+    const chips=document.querySelectorAll('.progress-chip'),vocabProgress=(done*10)+' / 50 词汇';
+    if(chips[0]&&/词汇/.test(chips[0].textContent)&&chips[0].textContent!==vocabProgress)chips[0].textContent=vocabProgress;
     const count=document.getElementById('wordCount');
     if(count&&/\/ 6$/.test(count.textContent))count.textContent=count.textContent.replace(' / 6',' / 10');
     document.querySelectorAll('.completion-card p').forEach(p=>{if(p.textContent.includes('6 个词汇'))p.innerHTML='<b>你今天完成了：</b>10 个词汇、4 组独立搭配卡、2 个语法语境点、1 段完整材料和 4 题闭卷验证。';});
