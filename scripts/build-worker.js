@@ -8,6 +8,7 @@ const assetPaths = [
   ['/daily-cycle.js', 'dist/daily-cycle.js', 'application/javascript; charset=utf-8'],
   ['/learning-path.js', 'dist/learning-path.js', 'application/javascript; charset=utf-8'],
   ['/course-upgrade.js', 'dist/course-upgrade.js', 'application/javascript; charset=utf-8'],
+  ['/word-card-redesign.js', 'dist/word-card-redesign.js', 'application/javascript; charset=utf-8'],
   ['/data/ability-map-canonical.json', 'dist/data/ability-map-canonical.json', 'application/json; charset=utf-8'],
   ['/data/course-vocab-index-2025.json', 'dist/data/course-vocab-index-2025.json', 'application/json; charset=utf-8']
 ];
