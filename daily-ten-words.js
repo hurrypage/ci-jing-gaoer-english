@@ -30,14 +30,28 @@
       button.textContent='✓ 已进入复习';button.classList.add('done');button.disabled=true;
     }));
   }
+  function syncLabels(){
+    const s=state(),done=Array.isArray(s.done)?s.done.length:0;
+    const hero=document.querySelector('.course-hero p');
+    if(hero){hero.textContent=done>=5?'本周已积累 50 个词汇、20 个固定搭配、10 个语法语境点和 5 次篇章训练。':'每天固定完成：10 个词汇、4 个固定搭配、2 个语法语境点、1 段完整篇章和 4 题闭卷验证。';}
+    document.querySelectorAll('.course-day small').forEach(x=>{if(/6词/.test(x.textContent))x.textContent='10词 · 4搭配 · 1篇';});
+    const chips=document.querySelectorAll('.progress-chip');
+    if(chips[0]&&/词汇/.test(chips[0].textContent))chips[0].textContent=(done*10)+' / 50 词汇';
+    const count=document.getElementById('wordCount');
+    if(count&&/\/ 6$/.test(count.textContent))count.textContent=count.textContent.replace(' / 6',' / 6 核心词 · 今日 10 词');
+    document.querySelectorAll('.completion-card p').forEach(p=>{if(p.textContent.includes('6 个词汇'))p.innerHTML='<b>你今天完成了：</b>10 个词汇、4 组独立搭配卡、2 个语法语境点、1 段完整材料和 4 题闭卷验证。';});
+    const sunday=document.querySelector('#sundayBody');
+    if(sunday&&(/词汇复习<\/span><b>6/.test(sunday.innerHTML)||sunday.textContent.includes('先进行 6 个词汇')))sunday.innerHTML=sunday.innerHTML.replace(/词汇复习<\/span><b>6/g,'词汇复习</span><b>10').replace(/先进行 6 个词汇/g,'先进行 10 个词汇');
+  }
   const observer=new MutationObserver(()=>{
     const banner=document.querySelector('.lesson-banner p');
     const bannerText='先完成 6 个重点精学词和 4 个同主题范围词，再进入搭配、语法、篇章和闭卷验证。';
     if(banner&&banner.textContent!==bannerText)banner.textContent=bannerText;
     const title=document.querySelector('.studio-top h3'),titleText='今天的 10 个词：6 个精学 + 4 个语境加深';if(title&&title.textContent!==titleText)title.textContent=titleText;
-    addPack();
+    addPack();syncLabels();
   });
   observer.observe(document.body,{childList:true,subtree:true});
+  syncLabels();
   // 空答与包含式误判均不允许进入“完成当天”。学生可核对答案后修正再提交。
   document.addEventListener('click',event=>{
     const button=event.target.closest('#submitDay');if(!button)return;
