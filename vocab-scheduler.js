@@ -2,7 +2,7 @@
   'use strict';
   const KEY='ci-jing-vocabulary-scheduler-v1';
   const DAY=86400000;
-  let catalog=null;
+  let catalog=null,learningCards=null;
   const iso=d=>new Date(d).toISOString().slice(0,10);
   const today=()=>iso(new Date());
   const addDays=(date,count)=>{const d=new Date(`${date}T12:00:00`);d.setDate(d.getDate()+count);return iso(d);};
@@ -31,6 +31,12 @@
     if(!state.records[id]) state.records[id]={word,source,introducedAt:today(),dueAt:addDays(today(),1),reps:0,lastGrade:'new',ready:ready(item)};
     save(); return id;
   }
+  function introduceSense(word,senseId,source='course'){
+    const item=find(word),wordId=item?.id||`course:${norm(word)}`,id=`${wordId}::${senseId}`;
+    if(!state.records[id]) state.records[id]={word,senseId,source,introducedAt:today(),dueAt:addDays(today(),1),reps:0,lastGrade:'new',ready:true};
+    save(); return id;
+  }
+  function coreSense(word){return learningCards?.[norm(word)]?.sense_units?.[0]?.id||null;}
   function recordCourseWord(word,grade){
     const id=introduce(word); const r=state.records[id];
     const intervals={review:1,hard:2,good:5,easy:30};
@@ -38,7 +44,14 @@
     else {r.lastGrade=grade==='review'?'review':grade||'good';r.reps=(r.reps||0)+1;r.dueAt=addDays(today(),intervals[grade]||5);}
     save(); emit(); return snapshot();
   }
-  function startCourseWords(words){(words||[]).forEach(w=>introduce(Array.isArray(w)?w[0]:w));save();emit();return snapshot();}
+  function recordCourseSense(word,senseId,grade){
+    const id=introduceSense(word,senseId),r=state.records[id];
+    const intervals={review:1,hard:2,good:5,easy:30};
+    if(grade==='easy'){state.retiredIds[id]=true;r.lastGrade='easy';r.retiredAt=today();}
+    else {r.lastGrade=grade==='review'?'review':grade||'good';r.reps=(r.reps||0)+1;r.dueAt=addDays(today(),intervals[grade]||5);}
+    save();emit();return snapshot();
+  }
+  function startCourseWords(words){(words||[]).forEach(w=>{const word=Array.isArray(w)?w[0]:w,senseId=coreSense(word);senseId?introduceSense(word,senseId):introduce(word);});save();emit();return snapshot();}
   function restoreAll(){state.retiredIds={};save();emit();}
   function emit(){window.dispatchEvent(new CustomEvent('cijing:vocabulary-update',{detail:snapshot()}));}
   function renderPlan(){
@@ -58,7 +71,7 @@
     const s=snapshot(); const note=document.createElement('div');note.id='vocabCatalogStatus';note.className='vocab-catalog-status';note.innerHTML=`<b>已接入排程：</b>${s.total.toLocaleString()} 条范围词；${s.readyCount} 条可完整精学；${s.due} 条到期复习。其余词先显示为待制卡或快速诊断，不假装成完整词卡。`;root.appendChild(note);
   }
   async function init(){
-    try{const response=await fetch('data/vocabulary-catalog-v1.json');if(!response.ok)throw Error();catalog=await response.json();window.CiJingVocabScheduler={snapshot,startCourseWords,recordCourseWord,restoreAll,getCatalog:()=>catalog};renderPlan();renderVocabNotice();emit();
+    try{const [catalogResponse,cardsResponse]=await Promise.all([fetch('data/vocabulary-catalog-v1.json'),fetch('data/vocabulary-learning-cards-v1.json')]);if(!catalogResponse.ok)throw Error();catalog=await catalogResponse.json();if(cardsResponse.ok){const data=await cardsResponse.json();learningCards=Object.fromEntries((data.records||[]).map(card=>[norm(card.headword),card]));}else learningCards={};window.CiJingVocabScheduler={snapshot,startCourseWords,recordCourseWord,recordCourseSense,restoreAll,getCatalog:()=>catalog};renderPlan();renderVocabNotice();emit();
       document.querySelectorAll('[data-view="plan"]').forEach(b=>b.addEventListener('click',()=>setTimeout(renderPlan,0)));
       document.querySelectorAll('[data-view="vocab"]').forEach(b=>b.addEventListener('click',()=>setTimeout(renderVocabNotice,0)));
       window.addEventListener('cijing:vocabulary-update',()=>{renderPlan(); const n=document.getElementById('vocabCatalogStatus');if(n){n.remove();renderVocabNotice();}});
