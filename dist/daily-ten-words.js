@@ -16,20 +16,17 @@
   const state=()=>{try{return {...{status:{}},...JSON.parse(localStorage.getItem(stateKey)||'{}')}}catch{return{status:{}}}};
   const save=s=>localStorage.setItem(stateKey,JSON.stringify(s));
   const currentDay=()=>{const m=document.querySelector('.lesson-banner .eyebrow')?.textContent.match(/第\s*(\d+)\s*天/);return m?Math.max(0,Math.min(4,+m[1]-1)):0;};
-  function addPack(){
-    const rest=document.getElementById('rest');
-    if(!rest||rest.querySelector('.ten-word-pack'))return;
-    const day=currentDay(), words=extras[day], s=state();
-    const pack=document.createElement('section');pack.className='ten-word-pack';
-    pack.innerHTML=`<h3>词汇加深 · 4 个同主题范围词</h3><p>与前面的 6 个重点词组成今天的 10 词。先读义项和例句，再点击“已完成语境判断”；点击后才进入个人复习排程。</p><div class="ten-word-grid">${words.map((w,n)=>{const id='extra-'+day+'-'+n,done=s.status[id];return `<article class="ten-word-card"><b>${w[0]}</b><p>${w[1]} · <strong>${w[2]}</strong></p><small>${w[3]}</small><button data-extra="${n}" class="${done?'done':''}">${done?'✓ 已进入复习':'已完成语境判断'}</button></article>`}).join('')}</div>`;
-    rest.prepend(pack);
-    pack.querySelectorAll('[data-extra]').forEach(button=>button.addEventListener('click',()=>{
-      const n=+button.dataset.extra,w=words[n],id='extra-'+day+'-'+n,now=state();
-      now.status[id]='good';save(now);
-      window.CiJingVocabScheduler?.recordCourseWord(w[0],'good');
-      button.textContent='✓ 已进入复习';button.classList.add('done');button.disabled=true;
-    }));
+  let sixthNextHandler=null;
+  function renderExtraWord(day,index){
+    const word=extras[day][index],number=index+7,id='extra-'+day+'-'+index,s=state(),done=s.status[id]==='good';
+    const stage=document.getElementById('wordStage'),count=document.getElementById('wordCount');
+    if(!stage||!count)return;
+    count.textContent=number+' / 10';
+    stage.innerHTML=`<div class="word-stage"><article class="focus-card"><div class="focus-word">${word[0]}</div><div class="phonetic">语境词卡 · 第 ${number} 词</div><span class="pos">词汇学习</span><div class="card-details"><div class="core-meaning">${word[1]}</div><div class="family">今天与前面词卡共同构成一组 10 词学习</div></div></article><aside class="study-side"><div class="purpose">先读搭配和例句，再判断自己能否在新句子中认出这个词的用法。</div><div class="colloc-box"><b>核心搭配</b>${word[2]}</div><div class="sentence-box">语境例句：${word[3].replace(new RegExp(word[0],'i'),x=>'<mark>'+x+'</mark>')}</div><div class="context-note"><b>语境提示：</b>不要只背中文义，把词放回例句中确认它承担的意思。</div></aside></div><div class="word-nav"><div class="word-dots">${Array.from({length:10},(_,n)=>`<button class="${n===number-1?'active':''}" aria-label="第 ${n+1} 词" disabled></button>`).join('')}</div><button id="directDone" class="${done?'selected':''}">${done?'✓ 已进入复习':'已完成语境判断'}</button><button class="primary" id="directNext">${index===3?'进入搭配与语法':'下一词 →'}</button></div>`;
+    document.getElementById('directDone').onclick=()=>{const now=state();now.status[id]='good';save(now);window.CiJingVocabScheduler?.recordCourseWord(word[0],'good');renderExtraWord(day,index);};
+    document.getElementById('directNext').onclick=()=>{if(index<3){renderExtraWord(day,index+1);document.querySelector('.studio')?.scrollIntoView({behavior:'smooth',block:'start'});return;}sixthNextHandler?.();};
   }
+  function enterDirectTenWordFlow(button){sixthNextHandler=button.onclick;renderExtraWord(currentDay(),0);document.querySelector('.studio')?.scrollIntoView({behavior:'smooth',block:'start'});}
   function syncLabels(){
     const s=state(),done=Array.isArray(s.done)?s.done.length:0;
     const hero=document.querySelector('.course-hero p');
@@ -38,20 +35,25 @@
     const chips=document.querySelectorAll('.progress-chip');
     if(chips[0]&&/词汇/.test(chips[0].textContent))chips[0].textContent=(done*10)+' / 50 词汇';
     const count=document.getElementById('wordCount');
-    if(count&&/\/ 6$/.test(count.textContent))count.textContent=count.textContent.replace(' / 6',' / 6 核心词 · 今日 10 词');
+    if(count&&/\/ 6$/.test(count.textContent))count.textContent=count.textContent.replace(' / 6',' / 10');
     document.querySelectorAll('.completion-card p').forEach(p=>{if(p.textContent.includes('6 个词汇'))p.innerHTML='<b>你今天完成了：</b>10 个词汇、4 组独立搭配卡、2 个语法语境点、1 段完整材料和 4 题闭卷验证。';});
     const sunday=document.querySelector('#sundayBody');
     if(sunday&&(/词汇复习<\/span><b>6/.test(sunday.innerHTML)||sunday.textContent.includes('先进行 6 个词汇')))sunday.innerHTML=sunday.innerHTML.replace(/词汇复习<\/span><b>6/g,'词汇复习</span><b>10').replace(/先进行 6 个词汇/g,'先进行 10 个词汇');
   }
   const observer=new MutationObserver(()=>{
     const banner=document.querySelector('.lesson-banner p');
-    const bannerText='先完成 6 个重点精学词和 4 个同主题范围词，再进入搭配、语法、篇章和闭卷验证。';
+    const bannerText='在同一条词汇工作台中顺序完成今天的 10 个词，再进入搭配、语法、篇章和闭卷验证。';
     if(banner&&banner.textContent!==bannerText)banner.textContent=bannerText;
-    const title=document.querySelector('.studio-top h3'),titleText='今天的 10 个词：6 个精学 + 4 个语境加深';if(title&&title.textContent!==titleText)title.textContent=titleText;
-    addPack();syncLabels();
+    const title=document.querySelector('.studio-top h3'),titleText='今天的 10 个词';if(title&&title.textContent!==titleText)title.textContent=titleText;
+    syncLabels();
   });
   observer.observe(document.body,{childList:true,subtree:true});
   syncLabels();
+  document.addEventListener('click',event=>{
+    const button=event.target.closest('#next'),count=document.getElementById('wordCount');
+    if(!button||!count||!/^6\s*\/\s*10/.test(count.textContent))return;
+    event.preventDefault();event.stopImmediatePropagation();enterDirectTenWordFlow(button);
+  },true);
   // 空答与包含式误判均不允许进入“完成当天”。学生可核对答案后修正再提交。
   document.addEventListener('click',event=>{
     const button=event.target.closest('#submitDay');if(!button)return;
