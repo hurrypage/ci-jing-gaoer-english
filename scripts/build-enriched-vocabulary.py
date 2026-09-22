@@ -76,8 +76,11 @@ def parse_entry(wikitext):
         for line in block.splitlines():
             if not line.startswith('#') or line.startswith('#:') or line.startswith('#*') or line.startswith('##'):continue
             val=plain(line.lstrip('# ').strip())
+            # A candidate layer must retain every distinct sense. Limiting this
+            # list to the first four definitions hid high-value later senses,
+            # such as "decline" = "refuse". Editorial review decides which
+            # 1–4 senses become student cards; extraction must not pre-judge it.
             if val and len(val)>1 and val not in defs:defs.append(val)
-            if len(defs)>=4:break
         if defs:groups.append({'part_of_speech':pos.lower(),'definitions_en':defs})
     return phonetics[:2],groups
 
@@ -137,7 +140,7 @@ for item in base:
       'editorial_fields':{'selected_senses':[],'collocations':[],'examples':[],'confusions':[],'review_status':'not_ready'},
       'content_boundary':'课标范围用于确定词表；中文释义、词性与变体来自本地 C 级候选资料；英文义项来自 Wiktionary 开放资料的机器解析候选，均须审核后才进入学生精学卡。'
     })
-meta={'title':'词境全量词汇内容库 v1','record_count':len(records),'with_english_senses':sum(bool(r['senses_en_candidate']) for r in records),'with_chinese_gloss_candidate':sum(bool(r['gloss_zh_candidate']) for r in records),'with_pos_candidate':sum(bool(r['lexical_form']['part_of_speech_candidate']) for r in records),'source_attribution':'English definitions parsed from English Wiktionary, CC BY-SA 4.0; every record stores page URL and revision ID. Raw wikitext is retained only in the local build cache, not distributed.','scope_boundary':'国家课程标准范围并不等于上海官方词频或上海真题词表。','release_boundary':'本文件是全量内容候选库；任何词条在 selected_senses、collocations、examples 完成审核前，不能进入学生精学卡。','generated_at':'2026-09-22'}
+meta={'title':'词境全量词汇内容库 v2','record_count':len(records),'with_english_senses':sum(bool(r['senses_en_candidate']) for r in records),'with_chinese_gloss_candidate':sum(bool(r['gloss_zh_candidate']) for r in records),'with_pos_candidate':sum(bool(r['lexical_form']['part_of_speech_candidate']) for r in records),'definition_candidate_count':sum(len(g['definitions_en']) for r in records for g in r['senses_en_candidate']),'source_attribution':'English definitions parsed from English Wiktionary, CC BY-SA 4.0; every record stores page URL and revision ID. Raw wikitext is retained only in the local build cache, not distributed.','scope_boundary':'国家课程标准范围并不等于上海官方词频或上海真题词表。','release_boundary':'本文件是全量内容候选库；任何词条在 selected_senses、collocations、examples 完成审核前，不能进入学生精学卡。','generated_at':'2026-09-22'}
 out={'metadata':meta,'records':records}
-(root/'dist/data/vocabulary-content-candidate-v1.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
+(root/'dist/data/vocabulary-content-candidate-v2.json').write_text(json.dumps(out,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 print(json.dumps(meta,ensure_ascii=False),flush=True)

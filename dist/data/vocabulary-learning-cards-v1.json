@@ -5,7 +5,8 @@
     "sense_unit_count": 61,
     "release_status": "第 1 周课程词的编辑发布层",
     "source_boundary": "不以本文件主张上海官方词频、上海真题出处或官方释义。",
-    "generated_at": "2026-09-22"
+    "generated_at": "2026-09-22",
+    "sense_scheduler_contract": "每个词先投放核心义项；附加义项在核心义项开始后第 2 个学习日到期，作为独立复习单元。"
   },
   "records": [
     {
@@ -27,7 +28,12 @@
             "prompt": "在 “The school provides students with a quiet place to read.” 中，provide 的核心意思是什么？",
             "accepted_answer": "提供；供给"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "provide--sense-1",
@@ -40,7 +46,12 @@
             "prompt": "补全或解释：provide for sb",
             "accepted_answer": "provide for sb"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -74,7 +85,12 @@
             "prompt": "在 “The survey reflects what students need most.” 中，reflect 的核心意思是什么？",
             "accepted_answer": "反映；体现"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "reflect--sense-1",
@@ -87,7 +103,12 @@
             "prompt": "补全或解释：reflect light",
             "accepted_answer": "reflect light"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         },
         {
           "id": "reflect--sense-2",
@@ -100,7 +121,12 @@
             "prompt": "补全或解释：reflect on sth",
             "accepted_answer": "reflect on sth"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 3,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -134,7 +160,12 @@
             "prompt": "在 “There is not enough evidence to support the claim.” 中，evidence 的核心意思是什么？",
             "accepted_answer": "证据；根据"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "evidence--sense-1",
@@ -147,7 +178,12 @@
             "prompt": "补全或解释：evidence of sth",
             "accepted_answer": "evidence of sth"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -181,7 +217,12 @@
             "prompt": "在 “The data cannot support that conclusion.” 中，support 的核心意思是什么？",
             "accepted_answer": "支持；证实"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "support--sense-1",
@@ -194,7 +235,12 @@
             "prompt": "补全或解释：support",
             "accepted_answer": "support"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -228,7 +274,12 @@
             "prompt": "在 “A lack of sleep may affect concentration.” 中，affect 的核心意思是什么？",
             "accepted_answer": "影响；使发生变化"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "affect--sense-1",
@@ -241,7 +292,12 @@
             "prompt": "补全或解释：affect sb deeply",
             "accepted_answer": "affect sb deeply"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -275,7 +331,12 @@
             "prompt": "在 “Students acquire skills through practice.” 中，acquire 的核心意思是什么？",
             "accepted_answer": "获得；习得"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "acquire--sense-1",
@@ -288,7 +349,12 @@
             "prompt": "补全或解释：acquire a habit",
             "accepted_answer": "acquire a habit"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -322,7 +388,12 @@
             "prompt": "在 “The study compared users with non-users.” 中，compare 的核心意思是什么？",
             "accepted_answer": "比较；对照"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "compare--sense-1",
@@ -335,7 +406,12 @@
             "prompt": "补全或解释：compare with",
             "accepted_answer": "compare with"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -369,7 +445,12 @@
             "prompt": "在 “It is too early to draw a conclusion.” 中，conclusion 的核心意思是什么？",
             "accepted_answer": "结论"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "conclusion--sense-1",
@@ -382,7 +463,12 @@
             "prompt": "补全或解释：come to a conclusion",
             "accepted_answer": "come to a conclusion"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -416,7 +502,12 @@
             "prompt": "在 “The school did not measure results.” 中，measure 的核心意思是什么？",
             "accepted_answer": "测量；衡量"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "measure--sense-1",
@@ -429,7 +520,12 @@
             "prompt": "补全或解释：measure",
             "accepted_answer": "measure"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -463,7 +559,12 @@
             "prompt": "在 “There was a decline in visits.” 中，decline 的核心意思是什么？",
             "accepted_answer": "下降；减少"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "decline--sense-1",
@@ -476,7 +577,12 @@
             "prompt": "补全或解释：decline an invitation",
             "accepted_answer": "decline an invitation"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -510,7 +616,12 @@
             "prompt": "在 “The report is available to students.” 中，available 的核心意思是什么？",
             "accepted_answer": "可获得的；可利用的"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "available--sense-1",
@@ -523,7 +634,12 @@
             "prompt": "补全或解释：available time",
             "accepted_answer": "available time"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -557,7 +673,12 @@
             "prompt": "在 “This is an approach to reading.” 中，approach 的核心意思是什么？",
             "accepted_answer": "方法；途径"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "approach--sense-1",
@@ -570,7 +691,12 @@
             "prompt": "补全或解释：approach",
             "accepted_answer": "approach"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -604,7 +730,12 @@
             "prompt": "在 “The report makes a strong claim.” 中，claim 的核心意思是什么？",
             "accepted_answer": "主张；声称"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "claim--sense-1",
@@ -617,7 +748,12 @@
             "prompt": "补全或解释：claim that",
             "accepted_answer": "claim that"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -651,7 +787,12 @@
             "prompt": "在 “The figures do not demonstrate change.” 中，demonstrate 的核心意思是什么？",
             "accepted_answer": "证明；表明"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "demonstrate--sense-1",
@@ -664,7 +805,12 @@
             "prompt": "补全或解释：demonstrate a skill",
             "accepted_answer": "demonstrate a skill"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -698,7 +844,12 @@
             "prompt": "在 “Students responded to the survey.” 中，respond 的核心意思是什么？",
             "accepted_answer": "回应；作出反应"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "respond--sense-1",
@@ -711,7 +862,12 @@
             "prompt": "补全或解释：respond that",
             "accepted_answer": "respond that"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -745,7 +901,12 @@
             "prompt": "在 “Maintain a balance in study.” 中，maintain 的核心意思是什么？",
             "accepted_answer": "保持；维持"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "maintain--sense-1",
@@ -758,7 +919,12 @@
             "prompt": "补全或解释：maintain that",
             "accepted_answer": "maintain that"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -792,7 +958,12 @@
             "prompt": "在 “The change is likely to affect habits.” 中，likely 的核心意思是什么？",
             "accepted_answer": "可能的"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "likely--sense-1",
@@ -805,7 +976,12 @@
             "prompt": "补全或解释：likely",
             "accepted_answer": "likely"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -839,7 +1015,12 @@
             "prompt": "在 “The library offers a range of books.” 中，range 的核心意思是什么？",
             "accepted_answer": "范围；一系列"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "range--sense-1",
@@ -852,7 +1033,12 @@
             "prompt": "补全或解释：range from A to B",
             "accepted_answer": "range from A to B"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -886,7 +1072,12 @@
             "prompt": "在 “The figures indicate that visits increased.” 中，indicate 的核心意思是什么？",
             "accepted_answer": "表明；显示"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "indicate--sense-1",
@@ -899,7 +1090,12 @@
             "prompt": "补全或解释：indicate sth to sb",
             "accepted_answer": "indicate sth to sb"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -933,7 +1129,12 @@
             "prompt": "在 “Practice is a factor in progress.” 中，factor 的核心意思是什么？",
             "accepted_answer": "因素"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "factor--sense-1",
@@ -946,7 +1147,12 @@
             "prompt": "补全或解释：key factor",
             "accepted_answer": "key factor"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -980,7 +1186,12 @@
             "prompt": "在 “Look for specific information.” 中，specific 的核心意思是什么？",
             "accepted_answer": "具体的；明确的"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "specific--sense-1",
@@ -993,7 +1204,12 @@
             "prompt": "补全或解释：be specific about",
             "accepted_answer": "be specific about"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1027,7 +1243,12 @@
             "prompt": "在 “Results vary from student to student.” 中，vary 的核心意思是什么？",
             "accepted_answer": "变化；不同"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "vary--sense-1",
@@ -1040,7 +1261,12 @@
             "prompt": "补全或解释：vary with",
             "accepted_answer": "vary with"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1074,7 +1300,12 @@
             "prompt": "在 “Do not assume two events connect.” 中，assume 的核心意思是什么？",
             "accepted_answer": "假定；认为"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "assume--sense-1",
@@ -1087,7 +1318,12 @@
             "prompt": "补全或解释：be assumed to be",
             "accepted_answer": "be assumed to be"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1121,7 +1357,12 @@
             "prompt": "在 “Students may benefit from feedback.” 中，benefit 的核心意思是什么？",
             "accepted_answer": "受益；好处"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "benefit--sense-1",
@@ -1134,7 +1375,12 @@
             "prompt": "补全或解释：benefit",
             "accepted_answer": "benefit"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1168,7 +1414,12 @@
             "prompt": "在 “Use reliable information when judging.” 中，reliable 的核心意思是什么？",
             "accepted_answer": "可靠的；可信赖的"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "reliable--sense-1",
@@ -1181,7 +1432,12 @@
             "prompt": "补全或解释：reliable source",
             "accepted_answer": "reliable source"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1215,7 +1471,12 @@
             "prompt": "在 “The task requires students to explain.” 中，require 的核心意思是什么？",
             "accepted_answer": "要求；需要"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "require--sense-1",
@@ -1228,7 +1489,12 @@
             "prompt": "补全或解释：require doing",
             "accepted_answer": "require doing"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1262,7 +1528,12 @@
             "prompt": "在 “The plan addresses an issue.” 中，issue 的核心意思是什么？",
             "accepted_answer": "问题；议题"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "issue--sense-1",
@@ -1275,7 +1546,12 @@
             "prompt": "补全或解释：issue a report",
             "accepted_answer": "issue a report"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1309,7 +1585,12 @@
             "prompt": "在 “The detail is relevant to the question.” 中，relevant 的核心意思是什么？",
             "accepted_answer": "相关的；切题的"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "relevant--sense-1",
@@ -1322,7 +1603,12 @@
             "prompt": "补全或解释：relevant evidence",
             "accepted_answer": "relevant evidence"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1354,7 +1640,12 @@
             "prompt": "在 “Practice contributes to progress.” 中，contribute 的核心意思是什么？",
             "accepted_answer": "促成；有助于"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "contribute--sense-1",
@@ -1367,7 +1658,12 @@
             "prompt": "补全或解释：contribute sth to",
             "accepted_answer": "contribute sth to"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {
@@ -1397,7 +1693,12 @@
             "prompt": "在 “Identify the reason for change.” 中，identify 的核心意思是什么？",
             "accepted_answer": "识别；找出"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 1,
+            "release_after_study_days": 0,
+            "delivery": "current_core"
+          }
         },
         {
           "id": "identify--sense-1",
@@ -1410,7 +1711,12 @@
             "prompt": "补全或解释：identify A as B",
             "accepted_answer": "identify A as B"
           },
-          "review_status": "ready_editorial_v1"
+          "review_status": "ready_editorial_v1",
+          "sequence": {
+            "order": 2,
+            "release_after_study_days": 2,
+            "delivery": "scheduled_follow_up"
+          }
         }
       ],
       "source": {

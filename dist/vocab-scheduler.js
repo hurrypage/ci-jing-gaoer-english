@@ -7,6 +7,7 @@
   const today=()=>iso(new Date());
   const addDays=(date,count)=>{const d=new Date(`${date}T12:00:00`);d.setDate(d.getDate()+count);return iso(d);};
   const isStudyDay=date=>{const d=new Date(`${date}T12:00:00`).getDay();return d>=1&&d<=5;};
+  const addStudyDays=(date,count)=>{let d=new Date(`${date}T12:00:00`),left=count;while(left>0){d.setDate(d.getDate()+1);if(isStudyDay(iso(d)))left--;}return iso(d);};
   const studyDaysBetween=(from,to)=>{let cursor=new Date(`${from}T12:00:00`),end=new Date(`${to}T12:00:00`),n=0;while(cursor<=end){if(isStudyDay(cursor))n++;cursor.setDate(cursor.getDate()+1);}return n;};
   const defaultState=()=>({version:1,startedAt:today(),targetDate:addDays(today(),365),studyDaysPerWeek:5,mode:'scope_plus_deep',records:{},retiredIds:{}});
   function load(){try{return {...defaultState(),...JSON.parse(localStorage.getItem(KEY)||'{}'),records:JSON.parse(localStorage.getItem(KEY)||'{}').records||{},retiredIds:JSON.parse(localStorage.getItem(KEY)||'{}').retiredIds||{}};}catch{return defaultState();}}
@@ -37,6 +38,17 @@
     save(); return id;
   }
   function coreSense(word){return learningCards?.[norm(word)]?.sense_units?.[0]?.id||null;}
+  function queueFollowUpSenses(word){
+    const card=learningCards?.[norm(word)]; if(!card)return;
+    (card.sense_units||[]).slice(1).forEach(unit=>{
+      const id=introduceSense(word,unit.id,'sense_route');
+      const record=state.records[id];
+      if(record.introducedAt===today()&&record.reps===0){
+        record.dueAt=addStudyDays(today(),unit.sequence?.release_after_study_days||2);
+        record.queued=true;
+      }
+    });
+  }
   function recordCourseWord(word,grade){
     const id=introduce(word); const r=state.records[id];
     const intervals={review:1,hard:2,good:5,easy:30};
@@ -51,7 +63,7 @@
     else {r.lastGrade=grade==='review'?'review':grade||'good';r.reps=(r.reps||0)+1;r.dueAt=addDays(today(),intervals[grade]||5);}
     save();emit();return snapshot();
   }
-  function startCourseWords(words){(words||[]).forEach(w=>{const word=Array.isArray(w)?w[0]:w,senseId=coreSense(word);senseId?introduceSense(word,senseId):introduce(word);});save();emit();return snapshot();}
+  function startCourseWords(words){(words||[]).forEach(w=>{const word=Array.isArray(w)?w[0]:w,senseId=coreSense(word);if(senseId){introduceSense(word,senseId);queueFollowUpSenses(word);}else introduce(word);});save();emit();return snapshot();}
   function restoreAll(){state.retiredIds={};save();emit();}
   function emit(){window.dispatchEvent(new CustomEvent('cijing:vocabulary-update',{detail:snapshot()}));}
   function renderPlan(){
