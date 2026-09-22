@@ -1,0 +1,236 @@
+{
+  "title": "上海高考英语核心能力地图（离线索引）",
+  "source": "E:\\DEL\\codex-英语高考数据\\03_能力地图\\合并能力映射_2026-09-22.json",
+  "records": [
+    {
+      "ability_id": "A01",
+      "ability": "语法语境化",
+      "question_type": "Grammar",
+      "assessment_target": "在连贯语篇中判断形式与语法关系",
+      "common_error": "孤立看空，不判断句子主干、时态语态与从句关系",
+      "training": "先划主干和从句边界，再解释为何其他形式不成立",
+      "source_ids": [
+        "R2018A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A02",
+      "ability": "词汇深度",
+      "question_type": "Vocabulary",
+      "assessment_target": "词性、语境义、搭配与构词综合判断",
+      "common_error": "只记中文释义、不核查词性和搭配",
+      "training": "用同一词写两种语境；记录替换后意义为何变化",
+      "source_ids": [
+        "R2018A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A03",
+      "ability": "篇章逻辑",
+      "question_type": "Cloze",
+      "assessment_target": "借上下文建立因果、转折、指代与话题链",
+      "common_error": "逐句选词、忽视整篇态度或论证方向",
+      "training": "先画段落逻辑图，再为选项提供上下文证据",
+      "source_ids": [
+        "R2026S"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A04",
+      "ability": "信息定位",
+      "question_type": "Reading应用文",
+      "assessment_target": "按任务约束筛选并匹配信息",
+      "common_error": "找到同词即选，不检查条件和适用对象",
+      "training": "把题目拆成条件清单，逐项引用证据",
+      "source_ids": [
+        "R2023A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A05",
+      "ability": "图文整合／看",
+      "question_type": "Reading图表",
+      "assessment_target": "把文字、表格或图像信息联合推理",
+      "common_error": "只读正文或只看图，忽略图例与条件",
+      "training": "先口述图表变量，再解释图文如何相互支持",
+      "source_ids": [
+        "R2018A",
+        "R2025A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A06",
+      "ability": "推断与证据",
+      "question_type": "Reading C",
+      "assessment_target": "区分直接信息、合理推断与过度推论",
+      "common_error": "把常识或个人偏好当文本立场",
+      "training": "给每个结论标出证据句与推理环节",
+      "source_ids": [
+        "R2019A",
+        "R2025A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A07",
+      "ability": "批判性思维",
+      "question_type": "观点比较／写作",
+      "assessment_target": "比较不同观点、证据与限定条件",
+      "common_error": "把讨论双方简化为对错、忽视语气程度",
+      "training": "制作主张—证据—限制三列表，写条件化结论",
+      "source_ids": [
+        "R2026S"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A08",
+      "ability": "衔接与连贯",
+      "question_type": "六选四",
+      "assessment_target": "识别段落功能、复现、指代与结构",
+      "common_error": "只匹配相同词，不核查前后逻辑",
+      "training": "先标空格在段首段中段末的功能，再回填验证",
+      "source_ids": [
+        "R2017A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A09",
+      "ability": "概要信息整合",
+      "question_type": "Summary",
+      "assessment_target": "区分主旨、必要要点与例证并压缩表达",
+      "common_error": "逐段摘句、遗漏上位概念、加入自己的评价",
+      "training": "先列信息层级，再脱离原句重写，逐点检查覆盖",
+      "source_ids": [
+        "R2026S",
+        "R2018A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A10",
+      "ability": "文体适应",
+      "question_type": "Summary／Reading",
+      "assessment_target": "随叙事、说明、议论调整概括策略",
+      "common_error": "把所有概要都套成说明文模板",
+      "training": "分别练人物—事件—变化与问题—原因—对策结构",
+      "source_ids": [
+        "R2025A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A11",
+      "ability": "语言转换",
+      "question_type": "Translation",
+      "assessment_target": "保留命题意义并用英语习惯表达",
+      "common_error": "逐字翻译、不处理隐含逻辑、遗漏关键信息",
+      "training": "中文拆义→英语主干→指定词嵌入→回译核对",
+      "source_ids": [
+        "R2026S"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A12",
+      "ability": "文化与跨文化",
+      "question_type": "Translation／词汇／读写",
+      "assessment_target": "理解文化负载表达并向目标读者解释",
+      "common_error": "只译字面形式，让读者无法理解文化意义",
+      "training": "用一句解释性英语表达文化概念，核对语境和对象",
+      "source_ids": [
+        "R2018A",
+        "R2024A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A13",
+      "ability": "交际任务完成",
+      "question_type": "Guided Writing",
+      "assessment_target": "识别对象、目的、体裁与内容限制",
+      "common_error": "背诵模板、遗漏比较或建议依据",
+      "training": "写前列任务核对表；逐段检查是否服务交际目的",
+      "source_ids": [
+        "R2021A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A14",
+      "ability": "论据与组织",
+      "question_type": "Guided Writing",
+      "assessment_target": "用事例和理由支持观点并连贯展开",
+      "common_error": "论点空泛、理由重复、例子与结论脱节",
+      "training": "写主张—例子—解释链，做反向提纲",
+      "source_ids": [
+        "R2025A",
+        "R2026S"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A15",
+      "ability": "听力场景理解",
+      "question_type": "Listening",
+      "assessment_target": "辨认角色、意图、关系、关键信息",
+      "common_error": "只抓听到的词、忽视否定转折及说话人意图",
+      "training": "短段精听后解释意图；再做变换表达匹配",
+      "source_ids": [
+        "R2018A",
+        "R2020A"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A16",
+      "ability": "口语表达与互动",
+      "question_type": "Speaking",
+      "assessment_target": "在时间限制内组织意义、提问和回应",
+      "common_error": "提问偏离任务、故事无因果、应答不合语用",
+      "training": "录音→转写→任务完成度检查→重录；分开反馈可懂度和语言",
+      "source_ids": [
+        "R2017A",
+        "T05"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    },
+    {
+      "ability_id": "A17",
+      "ability": "学习能力与自我调节",
+      "question_type": "跨题型",
+      "assessment_target": "规划、监测、反馈并调整策略",
+      "common_error": "只记录答案、不定位错误原因",
+      "training": "错因标注知识／证据／任务理解／执行，隔日迁移复测",
+      "source_ids": [
+        "P02",
+        "T05"
+      ],
+      "formal_status": "核心能力地图",
+      "formal_question_db": false
+    }
+  ],
+  "notes": "仅含核心能力地图的索引与训练建议。不是题目库，未附卷面题干或答案。"
+}
