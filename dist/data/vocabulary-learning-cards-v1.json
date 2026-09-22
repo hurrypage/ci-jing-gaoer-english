@@ -1,0 +1,1429 @@
+{
+  "metadata": {
+    "title": "词境已发布学习词卡 v1",
+    "record_count": 30,
+    "sense_unit_count": 61,
+    "release_status": "第 1 周课程词的编辑发布层",
+    "source_boundary": "不以本文件主张上海官方词频、上海真题出处或官方释义。",
+    "generated_at": "2026-09-22"
+  },
+  "records": [
+    {
+      "id": "NC2025-2183",
+      "headword": "provide",
+      "ipa_candidate": [
+        "/pɹəˈvaɪd/"
+      ],
+      "word_family": "provider (n.)",
+      "sense_units": [
+        {
+          "id": "provide--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "提供；供给",
+          "collocation": "provide sb with sth",
+          "example": "The school provides students with a quiet place to read.",
+          "recall": {
+            "prompt": "在 “The school provides students with a quiet place to read.” 中，provide 的核心意思是什么？",
+            "accepted_answer": "提供；供给"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "provide--sense-1",
+          "label": "provide for sb",
+          "part_of_speech": "v.",
+          "meaning_zh": "供养；为……作准备",
+          "collocation": "provide for a family",
+          "example": "She works hard to provide for her family.",
+          "recall": {
+            "prompt": "补全或解释：provide for sb",
+            "accepted_answer": "provide for sb"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/provide",
+          "revision_id": 91804332,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2266",
+      "headword": "reflect",
+      "ipa_candidate": [
+        "/ɹɪˈflɛkt/"
+      ],
+      "word_family": "reflection (n.); reflective (adj.)",
+      "sense_units": [
+        {
+          "id": "reflect--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "反映；体现",
+          "collocation": "reflect students’ needs",
+          "example": "The survey reflects what students need most.",
+          "recall": {
+            "prompt": "在 “The survey reflects what students need most.” 中，reflect 的核心意思是什么？",
+            "accepted_answer": "反映；体现"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "reflect--sense-1",
+          "label": "reflect light",
+          "part_of_speech": "v.",
+          "meaning_zh": "反射（光、热等）",
+          "collocation": "reflect light from a surface",
+          "example": "White walls reflect more light.",
+          "recall": {
+            "prompt": "补全或解释：reflect light",
+            "accepted_answer": "reflect light"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "reflect--sense-2",
+          "label": "reflect on sth",
+          "part_of_speech": "v.",
+          "meaning_zh": "认真思考；反思",
+          "collocation": "reflect on an experience",
+          "example": "Take time to reflect on what you learned.",
+          "recall": {
+            "prompt": "补全或解释：reflect on sth",
+            "accepted_answer": "reflect on sth"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/reflect",
+          "revision_id": 91789249,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1005",
+      "headword": "evidence",
+      "ipa_candidate": [
+        "/ˈɛv.ɪ.dəns/"
+      ],
+      "word_family": "evident (adj.); evidently (adv.)",
+      "sense_units": [
+        {
+          "id": "evidence--core",
+          "label": "核心义项",
+          "part_of_speech": "n.",
+          "meaning_zh": "证据；根据",
+          "collocation": "enough evidence",
+          "example": "There is not enough evidence to support the claim.",
+          "recall": {
+            "prompt": "在 “There is not enough evidence to support the claim.” 中，evidence 的核心意思是什么？",
+            "accepted_answer": "证据；根据"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "evidence--sense-1",
+          "label": "evidence of sth",
+          "part_of_speech": "n.",
+          "meaning_zh": "……的证据",
+          "collocation": "evidence of change",
+          "example": "There is no evidence of a change.",
+          "recall": {
+            "prompt": "补全或解释：evidence of sth",
+            "accepted_answer": "evidence of sth"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/evidence",
+          "revision_id": 91718057,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2705",
+      "headword": "support",
+      "ipa_candidate": [
+        "/səˈpɔːt/"
+      ],
+      "word_family": "supportive (adj.); supporter (n.)",
+      "sense_units": [
+        {
+          "id": "support--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "支持；证实",
+          "collocation": "support a conclusion",
+          "example": "The data cannot support that conclusion.",
+          "recall": {
+            "prompt": "在 “The data cannot support that conclusion.” 中，support 的核心意思是什么？",
+            "accepted_answer": "支持；证实"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "support--sense-1",
+          "label": "support",
+          "part_of_speech": "n.",
+          "meaning_zh": "支持；帮助",
+          "collocation": "with the support of",
+          "example": "The project continued with the support of parents.",
+          "recall": {
+            "prompt": "补全或解释：support",
+            "accepted_answer": "support"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/support",
+          "revision_id": 92724240,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0063",
+      "headword": "affect",
+      "ipa_candidate": [
+        "/əˈfɛkt/"
+      ],
+      "word_family": "effect (n.); affection (n.)",
+      "sense_units": [
+        {
+          "id": "affect--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "影响；使发生变化",
+          "collocation": "affect concentration",
+          "example": "A lack of sleep may affect concentration.",
+          "recall": {
+            "prompt": "在 “A lack of sleep may affect concentration.” 中，affect 的核心意思是什么？",
+            "accepted_answer": "影响；使发生变化"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "affect--sense-1",
+          "label": "affect sb deeply",
+          "part_of_speech": "v.",
+          "meaning_zh": "使某人感动／影响某人",
+          "collocation": "affect people deeply",
+          "example": "The story affected many readers deeply.",
+          "recall": {
+            "prompt": "补全或解释：affect sb deeply",
+            "accepted_answer": "affect sb deeply"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/affect",
+          "revision_id": 92731757,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0033",
+      "headword": "acquire",
+      "ipa_candidate": [
+        "/əˈkwaɪɚ/"
+      ],
+      "word_family": "acquisition (n.)",
+      "sense_units": [
+        {
+          "id": "acquire--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "获得；习得",
+          "collocation": "acquire skills",
+          "example": "Students acquire skills through practice.",
+          "recall": {
+            "prompt": "在 “Students acquire skills through practice.” 中，acquire 的核心意思是什么？",
+            "accepted_answer": "获得；习得"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "acquire--sense-1",
+          "label": "acquire a habit",
+          "part_of_speech": "v.",
+          "meaning_zh": "养成（习惯）",
+          "collocation": "acquire good habits",
+          "example": "Children acquire good habits gradually.",
+          "recall": {
+            "prompt": "补全或解释：acquire a habit",
+            "accepted_answer": "acquire a habit"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/acquire",
+          "revision_id": 92637374,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0585",
+      "headword": "compare",
+      "ipa_candidate": [
+        "/kəmˈpɛɚ/"
+      ],
+      "word_family": "comparison (n.); comparative (adj.)",
+      "sense_units": [
+        {
+          "id": "compare--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "比较；对照",
+          "collocation": "compare A with B",
+          "example": "The study compared users with non-users.",
+          "recall": {
+            "prompt": "在 “The study compared users with non-users.” 中，compare 的核心意思是什么？",
+            "accepted_answer": "比较；对照"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "compare--sense-1",
+          "label": "compare with",
+          "part_of_speech": "v.",
+          "meaning_zh": "与……相比；比得上",
+          "collocation": "compare with last year",
+          "example": "Sales rose compared with last year.",
+          "recall": {
+            "prompt": "补全或解释：compare with",
+            "accepted_answer": "compare with"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/compare",
+          "revision_id": 92685749,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0607",
+      "headword": "conclusion",
+      "ipa_candidate": [
+        "/kənˈkluːʒən/"
+      ],
+      "word_family": "conclude (v.); conclusive (adj.)",
+      "sense_units": [
+        {
+          "id": "conclusion--core",
+          "label": "核心义项",
+          "part_of_speech": "n.",
+          "meaning_zh": "结论",
+          "collocation": "draw a conclusion",
+          "example": "It is too early to draw a conclusion.",
+          "recall": {
+            "prompt": "在 “It is too early to draw a conclusion.” 中，conclusion 的核心意思是什么？",
+            "accepted_answer": "结论"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "conclusion--sense-1",
+          "label": "come to a conclusion",
+          "part_of_speech": "n.",
+          "meaning_zh": "得出结论",
+          "collocation": "come to the conclusion that",
+          "example": "We cannot come to a conclusion yet.",
+          "recall": {
+            "prompt": "补全或解释：come to a conclusion",
+            "accepted_answer": "come to a conclusion"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/conclusion",
+          "revision_id": 91352575,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1700",
+      "headword": "measure",
+      "ipa_candidate": [
+        "/ˈmɛʒ.ə/"
+      ],
+      "word_family": "measurement (n.); measurable (adj.)",
+      "sense_units": [
+        {
+          "id": "measure--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "测量；衡量",
+          "collocation": "measure results",
+          "example": "The school did not measure results.",
+          "recall": {
+            "prompt": "在 “The school did not measure results.” 中，measure 的核心意思是什么？",
+            "accepted_answer": "测量；衡量"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "measure--sense-1",
+          "label": "measure",
+          "part_of_speech": "n.",
+          "meaning_zh": "措施；方法",
+          "collocation": "take measures to do sth",
+          "example": "The school took measures to reduce waste.",
+          "recall": {
+            "prompt": "补全或解释：measure",
+            "accepted_answer": "measure"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/measure",
+          "revision_id": 92750761,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0749",
+      "headword": "decline",
+      "ipa_candidate": [
+        "/dɪˈklaɪn/"
+      ],
+      "word_family": "declining (adj.)",
+      "sense_units": [
+        {
+          "id": "decline--core",
+          "label": "核心义项",
+          "part_of_speech": "n./v.",
+          "meaning_zh": "下降；减少",
+          "collocation": "a decline in",
+          "example": "There was a decline in visits.",
+          "recall": {
+            "prompt": "在 “There was a decline in visits.” 中，decline 的核心意思是什么？",
+            "accepted_answer": "下降；减少"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "decline--sense-1",
+          "label": "decline an invitation",
+          "part_of_speech": "v.",
+          "meaning_zh": "谢绝",
+          "collocation": "decline an invitation politely",
+          "example": "He declined the invitation politely.",
+          "recall": {
+            "prompt": "补全或解释：decline an invitation",
+            "accepted_answer": "decline an invitation"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/decline",
+          "revision_id": 92322865,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0209",
+      "headword": "available",
+      "ipa_candidate": [
+        "/əˈveɪ.lə.bəl/"
+      ],
+      "word_family": "availability (n.)",
+      "sense_units": [
+        {
+          "id": "available--core",
+          "label": "核心义项",
+          "part_of_speech": "adj.",
+          "meaning_zh": "可获得的；可利用的",
+          "collocation": "be available to",
+          "example": "The report is available to students.",
+          "recall": {
+            "prompt": "在 “The report is available to students.” 中，available 的核心意思是什么？",
+            "accepted_answer": "可获得的；可利用的"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "available--sense-1",
+          "label": "available time",
+          "part_of_speech": "adj.",
+          "meaning_zh": "空闲的；有空的",
+          "collocation": "be available this afternoon",
+          "example": "The teacher is available this afternoon.",
+          "recall": {
+            "prompt": "补全或解释：available time",
+            "accepted_answer": "available time"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/available",
+          "revision_id": 91673470,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0154",
+      "headword": "approach",
+      "ipa_candidate": [
+        "/əˈpɹəʊt͡ʃ/"
+      ],
+      "word_family": "approachable (adj.)",
+      "sense_units": [
+        {
+          "id": "approach--core",
+          "label": "核心义项",
+          "part_of_speech": "n.",
+          "meaning_zh": "方法；途径",
+          "collocation": "an approach to",
+          "example": "This is an approach to reading.",
+          "recall": {
+            "prompt": "在 “This is an approach to reading.” 中，approach 的核心意思是什么？",
+            "accepted_answer": "方法；途径"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "approach--sense-1",
+          "label": "approach",
+          "part_of_speech": "v.",
+          "meaning_zh": "接近；靠近",
+          "collocation": "approach a problem",
+          "example": "We need to approach the problem carefully.",
+          "recall": {
+            "prompt": "补全或解释：approach",
+            "accepted_answer": "approach"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/approach",
+          "revision_id": 92140345,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0526",
+      "headword": "claim",
+      "ipa_candidate": [
+        "/kleɪm/"
+      ],
+      "word_family": "claimant (n.)",
+      "sense_units": [
+        {
+          "id": "claim--core",
+          "label": "核心义项",
+          "part_of_speech": "n./v.",
+          "meaning_zh": "主张；声称",
+          "collocation": "make a claim",
+          "example": "The report makes a strong claim.",
+          "recall": {
+            "prompt": "在 “The report makes a strong claim.” 中，claim 的核心意思是什么？",
+            "accepted_answer": "主张；声称"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "claim--sense-1",
+          "label": "claim that",
+          "part_of_speech": "v.",
+          "meaning_zh": "声称……",
+          "collocation": "claim that it is safe",
+          "example": "The company claimed that the product was safe.",
+          "recall": {
+            "prompt": "补全或解释：claim that",
+            "accepted_answer": "claim that"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/claim",
+          "revision_id": 92734534,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0768",
+      "headword": "demonstrate",
+      "ipa_candidate": [
+        "a=RP,GA,CA"
+      ],
+      "word_family": "demonstration (n.)",
+      "sense_units": [
+        {
+          "id": "demonstrate--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "证明；表明",
+          "collocation": "demonstrate that",
+          "example": "The figures do not demonstrate change.",
+          "recall": {
+            "prompt": "在 “The figures do not demonstrate change.” 中，demonstrate 的核心意思是什么？",
+            "accepted_answer": "证明；表明"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "demonstrate--sense-1",
+          "label": "demonstrate a skill",
+          "part_of_speech": "v.",
+          "meaning_zh": "展示；示范",
+          "collocation": "demonstrate how to use it",
+          "example": "The teacher demonstrated how to use the tool.",
+          "recall": {
+            "prompt": "补全或解释：demonstrate a skill",
+            "accepted_answer": "demonstrate a skill"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/demonstrate",
+          "revision_id": 90998973,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2320",
+      "headword": "respond",
+      "ipa_candidate": [
+        "/ɹɪˈspɒnd/"
+      ],
+      "word_family": "response (n.); responsive (adj.)",
+      "sense_units": [
+        {
+          "id": "respond--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "回应；作出反应",
+          "collocation": "respond to",
+          "example": "Students responded to the survey.",
+          "recall": {
+            "prompt": "在 “Students responded to the survey.” 中，respond 的核心意思是什么？",
+            "accepted_answer": "回应；作出反应"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "respond--sense-1",
+          "label": "respond that",
+          "part_of_speech": "v.",
+          "meaning_zh": "回答说……",
+          "collocation": "respond that they agreed",
+          "example": "Most students responded that they agreed.",
+          "recall": {
+            "prompt": "补全或解释：respond that",
+            "accepted_answer": "respond that"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/respond",
+          "revision_id": 91464101,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1663",
+      "headword": "maintain",
+      "ipa_candidate": [
+        "/meɪnˈteɪn/"
+      ],
+      "word_family": "maintenance (n.)",
+      "sense_units": [
+        {
+          "id": "maintain--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "保持；维持",
+          "collocation": "maintain a balance",
+          "example": "Maintain a balance in study.",
+          "recall": {
+            "prompt": "在 “Maintain a balance in study.” 中，maintain 的核心意思是什么？",
+            "accepted_answer": "保持；维持"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "maintain--sense-1",
+          "label": "maintain that",
+          "part_of_speech": "v.",
+          "meaning_zh": "坚持认为；主张",
+          "collocation": "maintain that it is necessary",
+          "example": "The writer maintains that practice matters.",
+          "recall": {
+            "prompt": "补全或解释：maintain that",
+            "accepted_answer": "maintain that"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/maintain",
+          "revision_id": 91338772,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1609",
+      "headword": "likely",
+      "ipa_candidate": [
+        "/ˈlaɪkli/"
+      ],
+      "word_family": "likelihood (n.)",
+      "sense_units": [
+        {
+          "id": "likely--core",
+          "label": "核心义项",
+          "part_of_speech": "adj.",
+          "meaning_zh": "可能的",
+          "collocation": "be likely to",
+          "example": "The change is likely to affect habits.",
+          "recall": {
+            "prompt": "在 “The change is likely to affect habits.” 中，likely 的核心意思是什么？",
+            "accepted_answer": "可能的"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "likely--sense-1",
+          "label": "likely",
+          "part_of_speech": "adv.",
+          "meaning_zh": "很可能；大概",
+          "collocation": "will likely continue",
+          "example": "The trend will likely continue.",
+          "recall": {
+            "prompt": "补全或解释：likely",
+            "accepted_answer": "likely"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/likely",
+          "revision_id": 91775507,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2226",
+      "headword": "range",
+      "ipa_candidate": [
+        "/ˈɹeɪnd͡ʒ/"
+      ],
+      "word_family": "ranging (adj.)",
+      "sense_units": [
+        {
+          "id": "range--core",
+          "label": "核心义项",
+          "part_of_speech": "n.",
+          "meaning_zh": "范围；一系列",
+          "collocation": "a range of",
+          "example": "The library offers a range of books.",
+          "recall": {
+            "prompt": "在 “The library offers a range of books.” 中，range 的核心意思是什么？",
+            "accepted_answer": "范围；一系列"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "range--sense-1",
+          "label": "range from A to B",
+          "part_of_speech": "v.",
+          "meaning_zh": "在 A 到 B 之间变化",
+          "collocation": "range from 10 to 20",
+          "example": "Prices range from 10 to 20 yuan.",
+          "recall": {
+            "prompt": "补全或解释：range from A to B",
+            "accepted_answer": "range from A to B"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/range",
+          "revision_id": 92510830,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1433",
+      "headword": "indicate",
+      "ipa_candidate": [
+        "/ˈɪndɪˌkeɪt/"
+      ],
+      "word_family": "indication (n.); indicative (adj.)",
+      "sense_units": [
+        {
+          "id": "indicate--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "表明；显示",
+          "collocation": "indicate that",
+          "example": "The figures indicate that visits increased.",
+          "recall": {
+            "prompt": "在 “The figures indicate that visits increased.” 中，indicate 的核心意思是什么？",
+            "accepted_answer": "表明；显示"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "indicate--sense-1",
+          "label": "indicate sth to sb",
+          "part_of_speech": "v.",
+          "meaning_zh": "指示；指出",
+          "collocation": "indicate the direction",
+          "example": "A sign indicates the direction.",
+          "recall": {
+            "prompt": "补全或解释：indicate sth to sb",
+            "accepted_answer": "indicate sth to sb"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/indicate",
+          "revision_id": 92415609,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1055",
+      "headword": "factor",
+      "ipa_candidate": [
+        "/ˈfæk.tə/"
+      ],
+      "word_family": "factorial (adj.)",
+      "sense_units": [
+        {
+          "id": "factor--core",
+          "label": "核心义项",
+          "part_of_speech": "n.",
+          "meaning_zh": "因素",
+          "collocation": "a factor in",
+          "example": "Practice is a factor in progress.",
+          "recall": {
+            "prompt": "在 “Practice is a factor in progress.” 中，factor 的核心意思是什么？",
+            "accepted_answer": "因素"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "factor--sense-1",
+          "label": "key factor",
+          "part_of_speech": "n.",
+          "meaning_zh": "关键因素",
+          "collocation": "a key factor in success",
+          "example": "Effort is a key factor in success.",
+          "recall": {
+            "prompt": "补全或解释：key factor",
+            "accepted_answer": "key factor"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/factor",
+          "revision_id": 92753646,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2597",
+      "headword": "specific",
+      "ipa_candidate": [
+        "/spɪˈsɪf.ɪk/"
+      ],
+      "word_family": "specifically (adv.); specify (v.)",
+      "sense_units": [
+        {
+          "id": "specific--core",
+          "label": "核心义项",
+          "part_of_speech": "adj.",
+          "meaning_zh": "具体的；明确的",
+          "collocation": "specific information",
+          "example": "Look for specific information.",
+          "recall": {
+            "prompt": "在 “Look for specific information.” 中，specific 的核心意思是什么？",
+            "accepted_answer": "具体的；明确的"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "specific--sense-1",
+          "label": "be specific about",
+          "part_of_speech": "adj.",
+          "meaning_zh": "对……说得具体",
+          "collocation": "be specific about the reason",
+          "example": "Please be specific about the reason.",
+          "recall": {
+            "prompt": "补全或解释：be specific about",
+            "accepted_answer": "be specific about"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/specific",
+          "revision_id": 92538577,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2936",
+      "headword": "vary",
+      "ipa_candidate": [
+        "/ˈvɛəɹi/"
+      ],
+      "word_family": "variety (n.); various (adj.)",
+      "sense_units": [
+        {
+          "id": "vary--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "变化；不同",
+          "collocation": "vary from A to B",
+          "example": "Results vary from student to student.",
+          "recall": {
+            "prompt": "在 “Results vary from student to student.” 中，vary 的核心意思是什么？",
+            "accepted_answer": "变化；不同"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "vary--sense-1",
+          "label": "vary with",
+          "part_of_speech": "v.",
+          "meaning_zh": "随……而变化",
+          "collocation": "vary with age",
+          "example": "Needs vary with age.",
+          "recall": {
+            "prompt": "补全或解释：vary with",
+            "accepted_answer": "vary with"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/vary",
+          "revision_id": 92722675,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0185",
+      "headword": "assume",
+      "ipa_candidate": [
+        "/əˈsjuːm/"
+      ],
+      "word_family": "assumption (n.)",
+      "sense_units": [
+        {
+          "id": "assume--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "假定；认为",
+          "collocation": "assume that",
+          "example": "Do not assume two events connect.",
+          "recall": {
+            "prompt": "在 “Do not assume two events connect.” 中，assume 的核心意思是什么？",
+            "accepted_answer": "假定；认为"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "assume--sense-1",
+          "label": "be assumed to be",
+          "part_of_speech": "v.",
+          "meaning_zh": "被认为是",
+          "collocation": "be assumed to be true",
+          "example": "The result should not be assumed to be true.",
+          "recall": {
+            "prompt": "补全或解释：be assumed to be",
+            "accepted_answer": "be assumed to be"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/assume",
+          "revision_id": 91779866,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-0287",
+      "headword": "benefit",
+      "ipa_candidate": [
+        "/ˈbɛn.ɪ.fɪt/"
+      ],
+      "word_family": "beneficial (adj.)",
+      "sense_units": [
+        {
+          "id": "benefit--core",
+          "label": "核心义项",
+          "part_of_speech": "n./v.",
+          "meaning_zh": "受益；好处",
+          "collocation": "benefit from",
+          "example": "Students may benefit from feedback.",
+          "recall": {
+            "prompt": "在 “Students may benefit from feedback.” 中，benefit 的核心意思是什么？",
+            "accepted_answer": "受益；好处"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "benefit--sense-1",
+          "label": "benefit",
+          "part_of_speech": "n.",
+          "meaning_zh": "益处；好处",
+          "collocation": "the benefit of exercise",
+          "example": "Exercise has clear benefits.",
+          "recall": {
+            "prompt": "补全或解释：benefit",
+            "accepted_answer": "benefit"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/benefit",
+          "revision_id": 92387589,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2286",
+      "headword": "reliable",
+      "ipa_candidate": [
+        "/ɹɪˈlaɪəbl̩/"
+      ],
+      "word_family": "reliability (n.); reliably (adv.)",
+      "sense_units": [
+        {
+          "id": "reliable--core",
+          "label": "核心义项",
+          "part_of_speech": "adj.",
+          "meaning_zh": "可靠的；可信赖的",
+          "collocation": "reliable information",
+          "example": "Use reliable information when judging.",
+          "recall": {
+            "prompt": "在 “Use reliable information when judging.” 中，reliable 的核心意思是什么？",
+            "accepted_answer": "可靠的；可信赖的"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "reliable--sense-1",
+          "label": "reliable source",
+          "part_of_speech": "adj.",
+          "meaning_zh": "可靠来源",
+          "collocation": "a reliable source of information",
+          "example": "Use a reliable source of information.",
+          "recall": {
+            "prompt": "补全或解释：reliable source",
+            "accepted_answer": "reliable source"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/reliable",
+          "revision_id": 92743169,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2308",
+      "headword": "require",
+      "ipa_candidate": [
+        "/ɹɪˈkwaɪə/"
+      ],
+      "word_family": "requirement (n.)",
+      "sense_units": [
+        {
+          "id": "require--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "要求；需要",
+          "collocation": "require sb to do sth",
+          "example": "The task requires students to explain.",
+          "recall": {
+            "prompt": "在 “The task requires students to explain.” 中，require 的核心意思是什么？",
+            "accepted_answer": "要求；需要"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "require--sense-1",
+          "label": "require doing",
+          "part_of_speech": "v.",
+          "meaning_zh": "需要被……",
+          "collocation": "require careful checking",
+          "example": "The report requires careful checking.",
+          "recall": {
+            "prompt": "补全或解释：require doing",
+            "accepted_answer": "require doing"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/require",
+          "revision_id": 91127894,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1495",
+      "headword": "issue",
+      "ipa_candidate": [
+        "/ˈɪʃuː/"
+      ],
+      "word_family": "—",
+      "sense_units": [
+        {
+          "id": "issue--core",
+          "label": "核心义项",
+          "part_of_speech": "n.",
+          "meaning_zh": "问题；议题",
+          "collocation": "address an issue",
+          "example": "The plan addresses an issue.",
+          "recall": {
+            "prompt": "在 “The plan addresses an issue.” 中，issue 的核心意思是什么？",
+            "accepted_answer": "问题；议题"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "issue--sense-1",
+          "label": "issue a report",
+          "part_of_speech": "v.",
+          "meaning_zh": "发布；颁发",
+          "collocation": "issue a report on safety",
+          "example": "The school issued a report on safety.",
+          "recall": {
+            "prompt": "补全或解释：issue a report",
+            "accepted_answer": "issue a report"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/issue",
+          "revision_id": 92354370,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-2285",
+      "headword": "relevant",
+      "ipa_candidate": [
+        "/ˈɹɛləvənt/"
+      ],
+      "word_family": "relevance (n.); irrelevant (adj.)",
+      "sense_units": [
+        {
+          "id": "relevant--core",
+          "label": "核心义项",
+          "part_of_speech": "adj.",
+          "meaning_zh": "相关的；切题的",
+          "collocation": "be relevant to",
+          "example": "The detail is relevant to the question.",
+          "recall": {
+            "prompt": "在 “The detail is relevant to the question.” 中，relevant 的核心意思是什么？",
+            "accepted_answer": "相关的；切题的"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "relevant--sense-1",
+          "label": "relevant evidence",
+          "part_of_speech": "adj.",
+          "meaning_zh": "相关证据",
+          "collocation": "relevant evidence for the claim",
+          "example": "Only use relevant evidence for the claim.",
+          "recall": {
+            "prompt": "补全或解释：relevant evidence",
+            "accepted_answer": "relevant evidence"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/relevant",
+          "revision_id": 91127849,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "COURSE-CONTRIBUTE",
+      "headword": "contribute",
+      "ipa_candidate": [],
+      "word_family": "contribution (n.); contributor (n.)",
+      "sense_units": [
+        {
+          "id": "contribute--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "促成；有助于",
+          "collocation": "contribute to",
+          "example": "Practice contributes to progress.",
+          "recall": {
+            "prompt": "在 “Practice contributes to progress.” 中，contribute 的核心意思是什么？",
+            "accepted_answer": "促成；有助于"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "contribute--sense-1",
+          "label": "contribute sth to",
+          "part_of_speech": "v.",
+          "meaning_zh": "捐献；投稿",
+          "collocation": "contribute ideas to a project",
+          "example": "Students contributed ideas to the project.",
+          "recall": {
+            "prompt": "补全或解释：contribute sth to",
+            "accepted_answer": "contribute sth to"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "课程编辑词：不在当前课标范围词库的精确匹配中",
+        "scope_level": null,
+        "wiktionary": null
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    },
+    {
+      "id": "NC2025-1404",
+      "headword": "identify",
+      "ipa_candidate": [
+        "/aɪˈdɛn.tɪ.faɪ/"
+      ],
+      "word_family": "identification (n.); identity (n.)",
+      "sense_units": [
+        {
+          "id": "identify--core",
+          "label": "核心义项",
+          "part_of_speech": "v.",
+          "meaning_zh": "识别；找出",
+          "collocation": "identify the reason",
+          "example": "Identify the reason for change.",
+          "recall": {
+            "prompt": "在 “Identify the reason for change.” 中，identify 的核心意思是什么？",
+            "accepted_answer": "识别；找出"
+          },
+          "review_status": "ready_editorial_v1"
+        },
+        {
+          "id": "identify--sense-1",
+          "label": "identify A as B",
+          "part_of_speech": "v.",
+          "meaning_zh": "确认 A 是 B",
+          "collocation": "identify the source as reliable",
+          "example": "We identified the source as reliable.",
+          "recall": {
+            "prompt": "补全或解释：identify A as B",
+            "accepted_answer": "identify A as B"
+          },
+          "review_status": "ready_editorial_v1"
+        }
+      ],
+      "source": {
+        "scope_source": "国家课程标准词汇底表（2025修订）",
+        "scope_level": "A",
+        "wiktionary": {
+          "url": "https://en.wiktionary.org/wiki/identify",
+          "revision_id": 91548773,
+          "license": "CC BY-SA 4.0"
+        }
+      },
+      "content_provenance": "编辑学习内容：中文学习义项、搭配、原创例句和回忆题。英文义项候选的可追溯来源见 Wiktionary 字段；不是上海高考真题或官方释义。",
+      "release_boundary": "本词已作为第 1 周课程编辑卡发布；其余候选义项不自动投放。"
+    }
+  ]
+}
