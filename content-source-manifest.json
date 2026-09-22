@@ -1,8 +1,8 @@
 {
   "project": "词境 · 高二英语复习",
-  "content_version": "0.1.0",
+  "content_version": "0.2.0",
   "created": "2026-09-22",
-  "scope": "首版人工审核练习卡的词汇范围出处；不构成上海高考专属词表或正式真题库。",
+  "scope": "编辑练习卡的词汇范围出处及核心能力地图索引；不构成上海高考专属词表或正式真题库。",
   "source": {
     "source_id": "NCS-2025-VOCAB-BASELINE",
     "title": "国家课标词汇底表（2025修订）结构化索引",
@@ -12,16 +12,130 @@
     "formal_question_db": false
   },
   "referenced_entries": [
-    {"card_ids":["c5"],"entry_id":"NC2025-0033","headword":"acquire","source_line":2393},
-    {"card_ids":["c6"],"entry_id":"NC2025-0063","headword":"affect","source_line":2423},
-    {"card_ids":["c12"],"entry_id":"NC2025-1412","headword":"illustrate","source_line":3855},
-    {"card_ids":["c9"],"entry_id":"NC2025-1700","headword":"measure","source_line":4162},
-    {"card_ids":["c1","c2"],"entry_id":"NC2025-2183","headword":"provide","source_line":4675},
-    {"card_ids":["c3"],"entry_id":"NC2025-2266","headword":"reflect","source_line":4763}
+    {
+      "card_ids": [
+        "c5"
+      ],
+      "entry_id": "NC2025-0033",
+      "headword": "acquire",
+      "source_line": 2393
+    },
+    {
+      "card_ids": [
+        "c6"
+      ],
+      "entry_id": "NC2025-0063",
+      "headword": "affect",
+      "source_line": 2423
+    },
+    {
+      "card_ids": [
+        "c12"
+      ],
+      "entry_id": "NC2025-1412",
+      "headword": "illustrate",
+      "source_line": 3855
+    },
+    {
+      "card_ids": [
+        "c9"
+      ],
+      "entry_id": "NC2025-1700",
+      "headword": "measure",
+      "source_line": 4162
+    },
+    {
+      "card_ids": [
+        "c1",
+        "c2"
+      ],
+      "entry_id": "NC2025-2183",
+      "headword": "provide",
+      "source_line": 4675
+    },
+    {
+      "card_ids": [
+        "c3"
+      ],
+      "entry_id": "NC2025-2266",
+      "headword": "reflect",
+      "source_line": 4763
+    },
+    {
+      "card_ids": [
+        "c15"
+      ],
+      "entry_id": "NC2025-0154",
+      "headword": "approach",
+      "source_line": null
+    },
+    {
+      "card_ids": [
+        "c16"
+      ],
+      "entry_id": "NC2025-0749",
+      "headword": "decline",
+      "source_line": null
+    },
+    {
+      "card_ids": [
+        "c17"
+      ],
+      "entry_id": "NC2025-2320",
+      "headword": "respond",
+      "source_line": null
+    },
+    {
+      "card_ids": [
+        "c18"
+      ],
+      "entry_id": "NC2025-0768",
+      "headword": "demonstrate",
+      "source_line": null
+    },
+    {
+      "card_ids": [
+        "c21"
+      ],
+      "entry_id": "NC2025-0209",
+      "headword": "available",
+      "source_line": null
+    },
+    {
+      "card_ids": [
+        "c22"
+      ],
+      "entry_id": "NC2025-0767",
+      "headword": "demand",
+      "source_line": null
+    },
+    {
+      "card_ids": [
+        "c26"
+      ],
+      "entry_id": "NC2025-1663",
+      "headword": "maintain",
+      "source_line": null
+    },
+    {
+      "card_ids": [
+        "c29"
+      ],
+      "entry_id": "NC2025-2226",
+      "headword": "range",
+      "source_line": null
+    }
   ],
   "editorial_rules": [
     "中文义项、例句、搭配说明和语法解释均为人工练习内容，须持续审核。",
     "上海专属真题、题频、听说材料只在完成来源与题文核验后独立加入。",
     "候选卷、回忆版、网络转载和隔离资料不得被标为正式真题。"
-  ]
+  ],
+  "ability_map": {
+    "source_file": "E:\\DEL\\codex-英语高考数据\\03_能力地图\\合并能力映射_2026-09-22.json",
+    "published_index": "dist/data/ability-map-canonical.json",
+    "record_count": 17,
+    "formal_question_db": false,
+    "purpose": "训练路径与题型说明，不含卷面题目或答案。"
+  }
 }
