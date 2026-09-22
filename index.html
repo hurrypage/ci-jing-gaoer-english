@@ -143,10 +143,10 @@
 
     <section class="view" id="vocab"><div class="weekend-shell"><div class="weekend-head"><div class="eyebrow">课标词汇范围 · 离线索引</div><h2>3,099 条国家课程标准词汇记录已接入。</h2><p>这是词汇范围索引，不能替代词义、搭配、例句和上海真题频次。检索结果会标明它的来源状态。</p></div><article class="panel"><label for="vocabSearch"><b>检索词汇</b></label><input id="vocabSearch" placeholder="输入英文单词，例如 reflect" style="width:100%;margin:12px 0;padding:12px;border:1px solid var(--line);border-radius:10px"><div id="vocabResults" class="review-list"><div class="empty"><strong>输入一个单词开始检索。</strong>范围来源为国家课程标准词汇底表。</div></div><button class="secondary study-back" id="backFromVocabBtn">返回学习中心</button></article></div></section>
 
-    <section class="view" id="plan"><div class="module-hero"><div class="eyebrow">一年倒计时 · 覆盖与复习控制</div><h2>先保证复习质量，再扩大新内容。</h2><p>年度目标按可检验学习单元计算；未完成词义、搭配、输出和迁移验证的内容，不能标为掌握。</p></div>
-      <article class="panel"><h2>年度覆盖仪表盘</h2><div class="annual-grid"><div class="annual-stat"><span>距离目标</span><b id="daysLeft">365 天</b><span>按 44 个有效学习周排程</span></div><div class="annual-stat"><span>已稳定复习项目</span><b id="coreProgress">0 / 800</b><span>目标按核心学习单元计</span></div><div class="annual-stat"><span>本周新增上限</span><b>20 单元</b><span>复习积压时自动暂停新增</span></div><div class="annual-stat"><span>内容供给</span><b id="contentSupply">30 / 800</b><span>现有编辑内容／年度目标</span></div></div><div class="annual-status" id="annualStatus"></div></article>
+    <section class="view" id="plan"><div id="vocabSchedulerPanel"></div><div class="module-hero"><div class="eyebrow">一年倒计时 · 覆盖与复习控制</div><h2>先保证复习质量，再扩大新内容。</h2><p>年度目标按可检验学习单元计算；未完成词义、搭配、输出和迁移验证的内容，不能标为掌握。</p></div>
+      <article class="panel"><h2>年度覆盖仪表盘</h2><div class="annual-grid"><div class="annual-stat"><span>距离目标</span><b id="daysLeft">—</b><span>按每周 5 个学习日排程</span></div><div class="annual-stat"><span>已进入词汇计划</span><b id="coreProgress">—</b><span>范围覆盖，不等于已掌握</span></div><div class="annual-stat"><span>排程原则</span><b>复习优先</b><span>到期复习多时暂停新增</span></div><div class="annual-stat"><span>可深度学习</span><b id="contentSupply">—</b><span>配齐词义、搭配、例句的词卡</span></div></div><div class="annual-status" id="annualStatus"></div></article>
       <div class="grid">
-        <article class="panel"><h2>这周怎么学</h2><p>每天先复习，再练2个词汇／搭配、1个双向翻译和少量应用卡；周末用新材料检查是否能迁移。</p><div class="task"><i class="dot"></i><div><b>周一至周五 · 15分钟</b><small>到期复习＋词汇搭配＋中译英／英译中＋语境应用</small></div></div><div class="task"><i class="dot"></i><div><b>周六 · 20分钟</b><small>陌生短文：先独立作答，再精读</small></div></div><div class="task"><i class="dot"></i><div><b>周日 · 5分钟</b><small>只查看积压与错误原因，不强制补卡</small></div></div></article>
+        <article class="panel"><h2>这周怎么学</h2><p>每日课程按固定顺序投放新词；到期词优先回顾。课程、复习和补救共同决定当天词汇任务。</p><div class="task"><i class="dot"></i><div><b>周一至周五 · 15分钟</b><small>到期复习＋词汇搭配＋中译英／英译中＋语境应用</small></div></div><div class="task"><i class="dot"></i><div><b>周六 · 20分钟</b><small>陌生短文：先独立作答，再精读</small></div></div><div class="task"><i class="dot"></i><div><b>周日 · 5分钟</b><small>只查看积压与错误原因，不强制补卡</small></div></div></article>
         <article class="panel"><h2>内容边界与能力路径</h2><p>首版卡片是人工审核练习，词汇范围参考国家课程标准词汇底表。它不把候选上海真题、回忆版或网络转载标为正式真题。</p><div class="task"><i class="dot"></i><div><b>编辑练习卡</b><small>30张，覆盖词义、搭配、双向翻译、语法与句法应用</small></div></div><div class="task"><i class="dot"></i><div><b>上海正式真题卡</b><small>0张；候选卷与转载题一律不投放</small></div></div><div class="task"><i class="dot"></i><div><b>听说训练</b><small>尚未启用，等待可用音频和规则核实</small></div></div><button class="secondary" id="openAbilityPlanBtn">查看 17 项能力路径</button></article>
       </div>
     </section>
@@ -248,8 +248,7 @@
   <script src="./daily-cycle.js"></script>
   <script src="./learning-path.js"></script>
   <script src="./course-upgrade.js"></script>
+  <script src="./vocab-scheduler.js"></script>
   <script src="./word-card-redesign.js"></script>
   <script src="./weekend-upgrade.js"></script></body>
 </html>
-
-
