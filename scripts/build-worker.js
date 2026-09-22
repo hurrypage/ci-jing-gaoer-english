@@ -5,6 +5,7 @@ const out = path.join(root, 'dist', 'server');
 const assetPaths = [
   ['/', 'dist/index.html', 'text/html; charset=utf-8'],
   ['/index.html', 'dist/index.html', 'text/html; charset=utf-8'],
+  ['/daily-cycle.js', 'dist/daily-cycle.js', 'application/javascript; charset=utf-8'],
   ['/data/ability-map-canonical.json', 'dist/data/ability-map-canonical.json', 'application/json; charset=utf-8'],
   ['/data/course-vocab-index-2025.json', 'dist/data/course-vocab-index-2025.json', 'application/json; charset=utf-8']
 ];
@@ -15,3 +16,4 @@ fs.mkdirSync(out, { recursive: true });
 fs.writeFileSync(path.join(out, 'index.js'), template.replace('/*__ASSETS__*/', JSON.stringify(assets)));
 fs.mkdirSync(path.join(root, 'dist', '.openai'), { recursive: true });
 fs.copyFileSync(path.join(root, '.openai', 'hosting.json'), path.join(root, 'dist', '.openai', 'hosting.json'));
+
