@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102c4d">
+  <title>词境 · 高二英语复习</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23102c4d'/%3E%3Cpath d='M17 16h30v32H17z' fill='%23f4d36c'/%3E%3Cpath d='M23 24h18M23 31h18M23 38h12' stroke='%23102c4d' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root { --navy:#102c4d; --ink:#142033; --muted:#627086; --paper:#f8f7f2; --panel:#fff; --line:#dce3ea; --yellow:#f4d36c; --blue:#3777c7; --mint:#dff3ea; --red:#b94942; --shadow:0 18px 48px rgba(24,48,75,.12); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(135deg,#e9f0f8 0%,#f8f7f2 52%,#f4efd8 100%); color:var(--ink); font-family:"Noto Sans SC","Microsoft YaHei",system-ui,sans-serif; min-height:100vh; }
+    button,input { font:inherit; }
+    button { cursor:pointer; }
+    .app { max-width:1120px; margin:0 auto; padding:28px 22px 54px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:28px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; color:var(--navy); letter-spacing:.04em; }
+    .brandmark { display:grid; place-items:center; width:38px; height:38px; background:var(--navy); color:var(--yellow); border-radius:12px; font-size:21px; }
+    .nav { display:flex; gap:4px; padding:4px; background:rgba(255,255,255,.64); border:1px solid rgba(255,255,255,.8); border-radius:14px; }
+    .nav button { border:0; padding:9px 13px; color:var(--muted); background:transparent; border-radius:10px; font-weight:700; }
+    .nav button.active { background:var(--navy); color:#fff; }
+    .view { display:none; } .view.active { display:block; }
+    .dashboard { display:grid; grid-template-columns:1.2fr .8fr; gap:20px; }
+    .welcome, .panel, .study-card, .today-card { background:rgba(255,255,255,.9); border:1px solid rgba(255,255,255,.9); box-shadow:var(--shadow); border-radius:24px; }
+    .welcome { padding:30px; background:var(--navy); color:white; min-height:260px; position:relative; overflow:hidden; }
+    .welcome:after { content:""; position:absolute; width:220px; height:220px; border:38px solid rgba(244,211,108,.18); border-radius:50%; right:-78px; bottom:-105px; }
+    .eyebrow { color:#b7cee8; font-size:.86rem; font-weight:700; letter-spacing:.08em; }
+    h1 { font-size:clamp(1.7rem,4vw,2.65rem); margin:13px 0 10px; line-height:1.18; }
+    .welcome p { max-width:510px; line-height:1.65; margin:0; color:#dbe8f5; }
+    .primary { margin-top:24px; padding:13px 18px; border:0; border-radius:12px; background:var(--yellow); color:#1b2c40; font-weight:800; box-shadow:0 7px 0 rgba(0,0,0,.13); }
+    .primary:active { transform:translateY(3px); box-shadow:0 4px 0 rgba(0,0,0,.13); }
+    .today-card { padding:25px; display:flex; flex-direction:column; justify-content:space-between; }
+    .today-card h2, .panel h2 { margin:0; font-size:1.15rem; }
+    .score { display:flex; align-items:baseline; gap:8px; margin:22px 0 6px; } .score strong { font-size:3.4rem; color:var(--navy); line-height:1; } .score span { color:var(--muted); }
+    .progress { height:11px; overflow:hidden; border-radius:99px; background:#e6ebf1; } .progress > i { display:block; height:100%; width:0; border-radius:99px; background:linear-gradient(90deg,var(--blue),#72b2d5); transition:width .3s; }
+    .smallnote { color:var(--muted); font-size:.86rem; margin-top:13px; line-height:1.5; }
+    .stats { grid-column:1 / -1; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .stat { padding:18px; background:rgba(255,255,255,.72); border:1px solid rgba(255,255,255,.9); border-radius:17px; }
+    .stat b { display:block; color:var(--navy); font-size:1.75rem; margin:4px 0; } .stat span { color:var(--muted); font-size:.85rem; }
+    .study-shell { max-width:760px; margin:0 auto; }
+    .study-head { display:flex; justify-content:space-between; align-items:center; margin:6px 0 16px; color:var(--muted); font-size:.92rem; }
+    .study-card { min-height:430px; padding:34px; display:flex; flex-direction:column; position:relative; }
+    .badge { align-self:flex-start; background:#e7f0fb; color:#2a609e; font-size:.8rem; font-weight:800; padding:6px 10px; border-radius:99px; }
+    .prompt { margin:auto 0 22px; } .prompt h2 { color:var(--navy); font-size:clamp(1.55rem,3.6vw,2.2rem); line-height:1.42; margin:16px 0; font-weight:800; }
+    .prompt .en { font-family:Georgia,serif; letter-spacing:.01em; } .instruction { color:var(--muted); line-height:1.6; }
+    .answer { display:none; border-top:1px solid var(--line); padding-top:20px; } .answer.show { display:block; }
+    .answer b { color:var(--navy); font-size:1.2rem; } .answer p { margin:9px 0 0; color:#4b586a; line-height:1.6; }
+    .source { margin-top:auto; padding-top:20px; color:#778497; font-size:.78rem; line-height:1.45; }
+    .reveal { border:1px solid var(--navy); border-radius:12px; padding:13px; background:white; color:var(--navy); font-weight:800; }
+    .rating { display:none; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:12px; }.rating.show { display:grid; }.rating button { border:0; border-radius:11px; padding:12px 5px; color:#fff; font-weight:800; }.again{background:#bd544d}.hard{background:#c6812c}.good{background:#34815e}.easy{background:#3777c7}
+    .study-footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:16px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }.panel { padding:24px; }.panel p { color:var(--muted); line-height:1.65; }.task { display:flex; gap:12px; align-items:flex-start; border-top:1px solid var(--line); padding:15px 0; }.task:first-of-type{border-top:0}.dot { width:11px; height:11px; flex:0 0 auto; margin-top:5px; border-radius:50%; background:var(--yellow); }.task b{display:block;color:var(--navy)}.task small{color:var(--muted);display:block;margin-top:4px}
+    .empty { padding:38px 20px; text-align:center; color:var(--muted); }.empty strong{display:block;color:var(--navy);font-size:1.2rem;margin-bottom:8px}
+    .settings { max-width:760px; margin:0 auto; }.setting-row { display:flex; justify-content:space-between; gap:18px; align-items:center; padding:17px 0; border-top:1px solid var(--line); }.setting-row:first-of-type{border-top:0}.setting-row b{display:block}.setting-row span{color:var(--muted);font-size:.88rem;display:block;margin-top:4px}.secondary { background:#eef3f7; border:0; color:var(--navy); padding:10px 12px; border-radius:10px; font-weight:800; white-space:nowrap; }.warning{color:var(--red)!important}.hidden{display:none}
+    .notice { position:fixed; left:50%; bottom:22px; transform:translateX(-50%) translateY(100px); background:#102c4d; color:#fff; border-radius:12px; padding:12px 16px; box-shadow:var(--shadow); transition:.24s; z-index:5; }.notice.show{transform:translateX(-50%) translateY(0)}
+    @media (max-width:720px){ .app{padding:18px 14px 42px}.topbar{align-items:flex-start;flex-direction:column}.nav{width:100%;justify-content:space-between}.nav button{flex:1;padding:9px 4px;font-size:.9rem}.dashboard,.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.study-card{min-height:480px;padding:24px}.rating{grid-template-columns:1fr 1fr}.welcome{min-height:0}.setting-row{align-items:flex-start;flex-direction:column}.setting-row button{width:100%} }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><div class="brandmark">词</div><span>词境 · 高二英语复习</span></div>
+      <nav class="nav" aria-label="主导航">
+        <button class="active" data-view="home">今天</button><button data-view="study">学习</button><button data-view="plan">计划</button><button data-view="settings">数据</button>
+      </nav>
+    </header>
+
+    <section class="view active" id="home">
+      <div class="dashboard">
+        <article class="welcome">
+          <div class="eyebrow" id="greeting">今日复习</div>
+          <h1>先把一个词，<br>放回它的句子里。</h1>
+          <p>今天先完成到期复习，再练少量新内容。答完后会安排下一次出现时间，也会为陌生语境保留验证机会。</p>
+          <button class="primary" id="startBtn">开始今天的学习</button>
+        </article>
+        <article class="today-card">
+          <h2>今日进度</h2>
+          <div><div class="score"><strong id="doneCount">0</strong><span>/ <span id="todayTotal">6</span> 项</span></div><div class="progress"><i id="todayProgress"></i></div></div>
+          <p class="smallnote" id="todayNote">先完成到期卡片，再决定是否学习新内容。</p>
+        </article>
+        <div class="stats">
+          <div class="stat"><span>到期复习</span><b id="dueCount">4</b><span>优先处理</span></div>
+          <div class="stat"><span>今日新内容</span><b id="newCount">2</b><span>可按时间预算暂停</span></div>
+          <div class="stat"><span>本周学习天数</span><b id="streakCount">1</b><span>不做排名</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="study">
+      <div class="study-shell">
+        <div class="study-head"><span id="queueLabel">今天 1 / 6</span><span id="minutesLabel">预计约 12 分钟</span></div>
+        <article class="study-card" id="studyCard">
+          <span class="badge" id="cardType">语境词义</span>
+          <div class="prompt"><div class="instruction" id="instruction">在句子中理解加粗词的意思。</div><h2 class="en" id="promptText"></h2></div>
+          <div class="answer" id="answerBox"><b id="answerText"></b><p id="explanationText"></p></div>
+          <div class="source" id="sourceText"></div>
+          <button class="reveal" id="revealBtn">显示答案</button>
+          <div class="rating" id="rating"><button class="again" data-grade="again">忘记了</button><button class="hard" data-grade="hard">有点难</button><button class="good" data-grade="good">记住了</button><button class="easy" data-grade="easy">很轻松</button></div>
+        </article>
+        <p class="study-footer">请按真实回忆情况选择。一次学习不等于已经会在陌生文章里使用。</p>
+      </div>
+    </section>
+
+    <section class="view" id="plan">
+      <div class="grid">
+        <article class="panel"><h2>这周怎么学</h2><p>每天先复习，随后新增不超过2个知识点。周末用新材料检查是否能迁移。</p><div class="task"><i class="dot"></i><div><b>周一至周五 · 15分钟</b><small>到期复习＋少量新卡＋语境应用</small></div></div><div class="task"><i class="dot"></i><div><b>周六 · 20分钟</b><small>陌生短文：先独立作答，再精读</small></div></div><div class="task"><i class="dot"></i><div><b>周日 · 5分钟</b><small>只查看积压与错误原因，不强制补卡</small></div></div></article>
+        <article class="panel"><h2>当前内容边界</h2><p>首版卡片是人工审核练习，词汇范围参考国家课程标准词汇底表。它不把候选上海真题、回忆版或网络转载标为正式真题。</p><div class="task"><i class="dot"></i><div><b>已审核练习卡</b><small>12张，覆盖词义、搭配与语法应用</small></div></div><div class="task"><i class="dot"></i><div><b>上海正式真题卡</b><small>0张，等待题文和来源完成核验</small></div></div><div class="task"><i class="dot"></i><div><b>听说训练</b><small>尚未启用，等待可用音频和规则核实</small></div></div></article>
+      </div>
+    </section>
+
+    <section class="view" id="settings">
+      <div class="settings panel">
+        <h2>学习数据</h2><p>所有记录保存在此设备浏览器中。请定期导出，避免清理浏览器数据后丢失进度。</p>
+        <div class="setting-row"><div><b>导出学习记录</b><span>下载包含答题、复习时间和偏好的 JSON 备份。</span></div><button class="secondary" id="exportBtn">导出备份</button></div>
+        <div class="setting-row"><div><b>导入学习记录</b><span>从此前导出的备份恢复；导入会替换当前设备记录。</span></div><label class="secondary" for="importInput">导入备份</label><input class="hidden" type="file" id="importInput" accept="application/json"></div>
+        <div class="setting-row"><div><b>重置本设备学习记录</b><span class="warning">仅删除浏览器内的学习进度，不会删除来源资料或项目文件。</span></div><button class="secondary" id="resetBtn">重置记录</button></div>
+      </div>
+    </section>
+  </main>
+  <div class="notice" id="notice" role="status" aria-live="polite"></div>
+
+  <script>
+    const cards = [
+      {id:'c1', type:'语境词义', instruction:'在句子中理解加粗词的意思。', prompt:'The school <b>provides</b> students with a quiet place to read.', answer:'provide sb with sth：为某人提供某物', explain:'本句的provides不是“证明”，而是“提供”。注意后面的with引出所提供的内容。', source:'人工练习句 · 词汇范围参考：国家课程标准词汇底表（2025修订）', category:'word'},
+      {id:'c2', type:'搭配填空', instruction:'填入最合适的介词。', prompt:'The school provides students ___ a quiet place to read.', answer:'with', explain:'固定搭配：provide sb with sth。另一种表达是provide sth for sb。', source:'人工练习句 · 搭配训练', category:'collocation'},
+      {id:'c3', type:'语境词义', instruction:'在句子中理解加粗词的意思。', prompt:'The report <b>reflects</b> the opinions of many students.', answer:'reflect：反映，体现', explain:'这里强调“报告呈现出意见”，不是“反射光线”。先判断名词report和opinions之间的关系。', source:'人工练习句 · 词汇范围参考：国家课程标准词汇底表（2025修订）', category:'word'},
+      {id:'c4', type:'语法应用', instruction:'填入正确形式。', prompt:'If I ___ you, I would ask the teacher for help. (be)', answer:'were', explain:'这是与当前事实相反的假设。书面语中，be常用were，不是把所有if从句都改成were。', source:'人工练习句 · 语法训练', category:'grammar'},
+      {id:'c5', type:'搭配填空', instruction:'填入一个最合适的词。', prompt:'Regular reading helps students ___ knowledge over time.', answer:'acquire', explain:'acquire knowledge表示“获得知识”。它比get更正式，常用于通过过程逐步得到的东西。', source:'人工练习句 · 词汇范围参考：国家课程标准词汇底表（2025修订）', category:'collocation'},
+      {id:'c6', type:'语境词义', instruction:'在句子中理解加粗词的意思。', prompt:'The new rule may <b>affect</b> the way students choose courses.', answer:'affect：影响', explain:'affect通常作动词，表示对某事产生影响；不要因拼写相近把它和effect混为一谈。', source:'人工练习句 · 词汇范围参考：国家课程标准词汇底表（2025修订）', category:'word'},
+      {id:'c7', type:'语法应用', instruction:'选择能使句子完整的连接方式。', prompt:'Not only did she finish the report, ___ she also explained the data clearly.', answer:'but', explain:'not only位于句首时，前半句通常部分倒装；后半句与but also对应。', source:'人工练习句 · 语法训练', category:'grammar'},
+      {id:'c8', type:'句子结构', instruction:'判断which引导的从句修饰什么。', prompt:'The book, <b>which</b> was published last year, has become popular.', answer:'which修饰The book', explain:'逗号提示这是非限制性定语从句，补充说明book，而不是修饰last year。', source:'人工练习句 · 句法训练', category:'grammar'},
+      {id:'c9', type:'语境词义', instruction:'在句子中理解加粗词的意思。', prompt:'The teacher asked us to <b>measure</b> the results carefully.', answer:'measure：测量；衡量', explain:'在results的语境中更接近“衡量、评估”，不是只用尺子量长度。', source:'人工练习句 · 词汇范围参考：国家课程标准词汇底表（2025修订）', category:'word'},
+      {id:'c10', type:'搭配填空', instruction:'填入最合适的动词。', prompt:'The article encourages readers to ___ attention to the evidence.', answer:'pay', explain:'固定搭配：pay attention to。注意to是介词，后面可接名词或动名词。', source:'人工练习句 · 搭配训练', category:'collocation'},
+      {id:'c11', type:'语法应用', instruction:'填入一个关系词。', prompt:'This is the reason ___ he was late.', answer:'why', explain:'reason后常用why引导定语从句；也可写for which，但不要误用because形成重复结构。', source:'人工练习句 · 语法训练', category:'grammar'},
+      {id:'c12', type:'语境词义', instruction:'在句子中理解加粗词的意思。', prompt:'A clear example can <b>illustrate</b> a difficult idea.', answer:'illustrate：说明，阐明', explain:'这里的example用来帮助解释idea，illustrate不是只指“画插图”。', source:'人工练习句 · 词汇范围参考：国家课程标准词汇底表（2025修订）', category:'word'}
+    ];
+    const KEY = 'shanghai-english-flashcards-v1';
+    const today = () => new Date().toISOString().slice(0,10);
+    function defaultState(){ return {version:1, sessionDate:today(), completed:[], history:[], cards:{}, visits:[today()]}; }
+    function load(){ try { const s=JSON.parse(localStorage.getItem(KEY)); return s && s.version===1?s:defaultState(); } catch { return defaultState(); } }
+    let state=load(); let currentIndex=0; let reveal=false;
+    function save(){ localStorage.setItem(KEY,JSON.stringify(state)); }
+    function toast(msg){ const el=document.getElementById('notice');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2500); }
+    function dueCards(){ const now=Date.now(); return cards.filter(c=>{const d=state.cards[c.id];return d&&new Date(d.due).getTime()<=now&&!state.completed.includes(c.id)}); }
+    function newCards(){ return cards.filter(c=>!state.cards[c.id]&&!state.completed.includes(c.id)); }
+    function queue(){ const q=[...dueCards(),...newCards().slice(0,2)]; return q.length?q:[]; }
+    function ensureDay(){ if(state.sessionDate!==today()){state.sessionDate=today();state.completed=[];if(!state.visits.includes(today()))state.visits.push(today());save();} }
+    function weeklyVisits(){ const week=Date.now()-6*86400000; return state.visits.filter(d=>new Date(d).getTime()>=week).length; }
+    function updateHome(){ ensureDay(); const q=queue(); const total=Math.min(6,Math.max(q.length,6)); document.getElementById('doneCount').textContent=state.completed.length;document.getElementById('todayTotal').textContent=total;document.getElementById('todayProgress').style.width=Math.min(100,state.completed.length/total*100)+'%';document.getElementById('dueCount').textContent=dueCards().length;document.getElementById('newCount').textContent=Math.min(2,newCards().length);document.getElementById('streakCount').textContent=weeklyVisits();document.getElementById('todayNote').textContent=q.length?`还剩 ${q.length} 项，先凭记忆作答，再看解释。`:'今天的基础任务已经完成。明天会按复习安排出现新的任务。'; }
+    function renderStudy(){ ensureDay(); const q=queue(); if(!q.length){document.getElementById('studyCard').innerHTML='<div class="empty"><strong>今天完成了。</strong>请明天再来复习；周末可用陌生短文检查是否真的会用。</div>';document.getElementById('queueLabel').textContent='今天已完成';return;} currentIndex=Math.min(currentIndex,q.length-1);const c=q[currentIndex];document.getElementById('queueLabel').textContent=`今天 ${state.completed.length+1} / ${Math.min(6,Math.max(q.length+state.completed.length,6))}`;document.getElementById('cardType').textContent=c.type;document.getElementById('instruction').textContent=c.instruction;document.getElementById('promptText').innerHTML=c.prompt;document.getElementById('answerText').textContent=c.answer;document.getElementById('explanationText').textContent=c.explain;document.getElementById('sourceText').textContent=c.source;document.getElementById('answerBox').classList.toggle('show',reveal);document.getElementById('revealBtn').classList.toggle('hidden',reveal);document.getElementById('rating').classList.toggle('show',reveal);}
+    function schedule(grade){ const q=queue();const c=q[currentIndex];if(!c)return;const prev=state.cards[c.id]||{reps:0,interval:0};let interval={again:1,hard:2,good:5,easy:10}[grade];if(prev.interval) interval=Math.max(1,Math.round(prev.interval*({again:.45,hard:1.25,good:2,easy:2.8}[grade])));const due=new Date(Date.now()+interval*86400000).toISOString();state.cards[c.id]={reps:prev.reps+1,interval,due,lastGrade:grade};state.history.push({id:c.id,at:new Date().toISOString(),grade,interval});state.completed.push(c.id);save();reveal=false;currentIndex=0;updateHome();renderStudy();toast(grade==='again'?'已安排明天复习':'已安排下一次复习'); }
+    function changeView(view){document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===view));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===view));if(view==='home')updateHome();if(view==='study')renderStudy();}
+    document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>changeView(b.dataset.view)));document.getElementById('startBtn').addEventListener('click',()=>changeView('study'));document.getElementById('revealBtn').addEventListener('click',()=>{reveal=true;renderStudy();});document.getElementById('rating').addEventListener('click',e=>{if(e.target.dataset.grade)schedule(e.target.dataset.grade)});
+    document.getElementById('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`词境学习记录_${today()}.json`;a.click();URL.revokeObjectURL(url);toast('备份已导出');});
+    document.getElementById('importInput').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const next=JSON.parse(r.result);if(!next.version||!next.cards)throw new Error();state=next;ensureDay();save();updateHome();toast('学习记录已恢复');}catch{toast('这个备份文件无法识别');}};r.readAsText(f);});
+    document.getElementById('resetBtn').addEventListener('click',()=>{if(confirm('确定重置此设备上的学习记录吗？建议先导出备份。')){state=defaultState();save();updateHome();toast('学习记录已重置');}});
+    updateHome();renderStudy();
+  </script>
+</body>
+</html>
