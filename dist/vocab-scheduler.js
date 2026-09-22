@@ -3,10 +3,11 @@
   const KEY='ci-jing-vocabulary-scheduler-v1';
   const DAY=86400000;
   let catalog=null,learningCards=null;
-  const iso=d=>new Date(d).toISOString().slice(0,10);
+  // 学习日以学生所在的上海时区计算，不能用 UTC 在凌晨提前换日。
+  const iso=d=>{const parts=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(d));const get=type=>parts.find(x=>x.type===type)?.value;return `${get('year')}-${get('month')}-${get('day')}`;};
   const today=()=>iso(new Date());
   const addDays=(date,count)=>{const d=new Date(`${date}T12:00:00`);d.setDate(d.getDate()+count);return iso(d);};
-  const isStudyDay=date=>{const d=new Date(`${date}T12:00:00`).getDay();return d>=1&&d<=5;};
+  const isStudyDay=date=>{const d=date instanceof Date?date:new Date(`${date}T12:00:00`);const day=d.getDay();return day>=1&&day<=5;};
   const addStudyDays=(date,count)=>{let d=new Date(`${date}T12:00:00`),left=count;while(left>0){d.setDate(d.getDate()+1);if(isStudyDay(iso(d)))left--;}return iso(d);};
   const studyDaysBetween=(from,to)=>{let cursor=new Date(`${from}T12:00:00`),end=new Date(`${to}T12:00:00`),n=0;while(cursor<=end){if(isStudyDay(cursor))n++;cursor.setDate(cursor.getDate()+1);}return n;};
   const defaultState=()=>({version:1,startedAt:today(),targetDate:addDays(today(),365),studyDaysPerWeek:5,mode:'scope_plus_deep',records:{},retiredIds:{}});
@@ -20,7 +21,8 @@
   function snapshot(){
     if(!catalog)return null;
     const total=catalog.metadata.record_count, readyCount=catalog.metadata.ready_editor_card_count;
-    const introduced=Object.keys(state.records).filter(id=>!state.retiredIds[id]).length;
+    // “已进入计划”按词头统计；待开放的第二义项不能冒充一个新学单词。
+    const introduced=new Set(Object.entries(state.records).filter(([id,r])=>!state.retiredIds[id]&&!r.queued).map(([,r])=>norm(r.word))).size;
     const due=dueEntries().length;
     const remainingDays=Math.max(1,studyDaysBetween(today(),state.targetDate));
     const scopeBudget=Math.ceil(Math.max(0,total-introduced)/remainingDays);
@@ -60,10 +62,13 @@
     const id=introduceSense(word,senseId),r=state.records[id];
     const intervals={review:1,hard:2,good:5,easy:30};
     if(grade==='easy'){state.retiredIds[id]=true;r.lastGrade='easy';r.retiredAt=today();}
-    else {r.lastGrade=grade==='review'?'review':grade||'good';r.reps=(r.reps||0)+1;r.dueAt=addDays(today(),intervals[grade]||5);}
+    else {r.lastGrade=grade==='review'?'review':grade||'good';r.reps=(r.reps||0)+1;r.dueAt=addDays(today(),intervals[grade]||5);if(r.reps===1&&!r.queued)queueFollowUpSenses(word);}
     save();emit();return snapshot();
   }
-  function startCourseWords(words){(words||[]).forEach(w=>{const word=Array.isArray(w)?w[0]:w,senseId=coreSense(word);if(senseId){introduceSense(word,senseId);queueFollowUpSenses(word);}else introduce(word);});save();emit();return snapshot();}
+  // 打开课程只表示“计划看到”，不能把尚未学习的词计入完成进度。
+  // 真正进入个人排程发生在学生对该词作出学习判断时。
+  function startCourseWords(){save();emit();return snapshot();}
+  function getDueTasks(limit=10){return dueEntries().slice(0,limit).map(([id,r])=>({id,word:r.word,senseId:r.senseId||null,dueAt:r.dueAt,grade:r.lastGrade}));}
   function restoreAll(){state.retiredIds={};save();emit();}
   function emit(){window.dispatchEvent(new CustomEvent('cijing:vocabulary-update',{detail:snapshot()}));}
   function renderPlan(){
@@ -84,6 +89,7 @@
   }
   async function init(){
     try{const [catalogResponse,cardsResponse]=await Promise.all([fetch('data/vocabulary-catalog-v1.json'),fetch('data/vocabulary-learning-cards-v1.json')]);if(!catalogResponse.ok)throw Error();catalog=await catalogResponse.json();if(cardsResponse.ok){const data=await cardsResponse.json();learningCards=Object.fromEntries((data.records||[]).map(card=>[norm(card.headword),card]));}else learningCards={};window.CiJingVocabScheduler={snapshot,startCourseWords,recordCourseWord,recordCourseSense,restoreAll,getCatalog:()=>catalog};renderPlan();renderVocabNotice();emit();
+      window.CiJingVocabScheduler.getDueTasks=getDueTasks;
       document.querySelectorAll('[data-view="plan"]').forEach(b=>b.addEventListener('click',()=>setTimeout(renderPlan,0)));
       document.querySelectorAll('[data-view="vocab"]').forEach(b=>b.addEventListener('click',()=>setTimeout(renderVocabNotice,0)));
       window.addEventListener('cijing:vocabulary-update',()=>{renderPlan(); const n=document.getElementById('vocabCatalogStatus');if(n){n.remove();renderVocabNotice();}});
